@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar';
 
+import './Css/Header.css';
+
 const Header = () => {
 
   const { offsetY, setOffSetY } = useState();
