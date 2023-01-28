@@ -1,7 +1,8 @@
 
 import { click } from '@testing-library/user-event/dist/click';
 import { useState } from 'react';
-import App from './../../App';
+
+import './footer.css'
 
 const Footer = () => {
 

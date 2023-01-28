@@ -1,0 +1,140 @@
+.sectionSkills {
+    grid-area: SectionSkills;
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "skills skills" 382px
+        "tools  others" 471px /
+        auto auto;
+    min-width: 250px;
+    height: 876px;
+}
+
+.skills {
+    grid-area: skills;
+    background-color: var(--bg-secundary);
+    padding: 16px 12px 9px;
+}
+
+.skills__border {
+    width: 100%;
+    height: auto;
+    padding: 26px 30px 16px;
+    border: 1px solid var(--secundary-color);
+}
+
+.skills__title-ctr,
+.tools__title-ctr {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 49px;
+    padding: 0 30px;
+    background-color: var(--secundary-color);
+}
+
+.skills__title-ctr__h2,
+.tools__title-ctr__h2 {
+    font-family: var(--font-family1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--bg-secundary);
+    margin-bottom: 0px;
+}
+
+.skills__items,
+.tools__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.skills__items__ctn {
+    width: 90px;
+    min-width: 90px;
+    margin-right: 5px;
+}
+
+.skills__items__p,
+.skills__items__porcent,
+.tools__items__p {
+    font-family: var(--font-family1);
+    font-size: 1.13rem;
+    font-weight: lighter;
+    color: white;
+}
+
+.skills__items__porcent {
+    margin-left: 10px;
+}
+
+.skills__items__bar,
+.skills__items__bar::after {
+    width: 100%;
+    max-width: 441px;
+    height: 10px;
+    background-color: var(--bg-dark-color);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills__items__bar::after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    background-color: var(--secundary-color);
+    transition: var(--transition);
+    animation: bar-fill 2s ease-in-out forwards;
+}
+
+/*Porcentajes*/
+
+.skills__items__bar--30::after {
+    --bar-lenght: 30%;
+}
+
+.skills__items__bar--40::after {
+    --bar-lenght: 40%;
+}
+
+.skills__items__bar--50::after {
+    --bar-lenght: 50%;
+}
+
+.skills__items__bar--60::after {
+    --bar-lenght: 60%;
+}
+
+
+.tools {
+    grid-area: tools;
+    background-color: var(--bg-secundary);
+    padding: 12px 8px 8px 8px;
+}
+
+.tools__border {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid var(--secundary-color);
+}
+
+.tools__items__photo {
+    width: 38px;
+}
+
+.tools__items {
+    margin-bottom: 25px;
+}
+
+@keyframes bar-fill {
+    to {
+        transform: translateX(var(--bar-lenght));
+    }
+}
+
+
+

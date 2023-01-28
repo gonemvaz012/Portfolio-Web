@@ -1,7 +1,9 @@
 import React from 'react'
 import Skills from './Items/Skills'
-import Spinner from './Items/Spinner'
+import Spinner from './Items/Skills'
 import Tools from './Items/Tools'
+
+import './Css/sectionSkills.css'
 
 const SectionSkills = () => {
   return (
@@ -9,14 +11,14 @@ const SectionSkills = () => {
       <Skills/>
       <Tools />
       <div className='others'>
-        <h2 className='skills__title'>SKILLS</h2>
+        <h2 className='skills__title'>APTITUDES</h2>
         <div className='skills__items'>
           <p className='skills__items__p'>Ingles</p>
-          <Spinner/>
+          
         </div>
         <div className='skills__items'>
           <p className='skills__items__p'>Ingles</p>
-          <Spinner/>
+          
         </div>
       </div>
     </section>

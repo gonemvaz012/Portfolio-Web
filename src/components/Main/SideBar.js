@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Css/sideBar.css'
+
 const  SideBar= () => {
   return (
     <aside className='aside'>

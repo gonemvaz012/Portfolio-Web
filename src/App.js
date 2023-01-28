@@ -1,7 +1,7 @@
 
-import Footer from './components/public/Footer';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header';
-import Main  from './components/public/Main';
+import Main  from './components/Main';
 
 import './index.css'
 
