@@ -1,6 +1,6 @@
 import React from 'react'
 import Skills from './Items/Skills'
-import Spinner from './Items/Skills'
+import Spinner from './Items/Spinner'
 import Tools from './Items/Tools'
 
 import './Css/sectionSkills.css'
@@ -18,7 +18,7 @@ const SectionSkills = () => {
         </div>
         <div className='skills__items'>
           <p className='skills__items__p'>Ingles</p>
-          
+          <Spinner/>
         </div>
       </div>
     </section>

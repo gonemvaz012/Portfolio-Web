@@ -1,0 +1,56 @@
+.circular{
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+.circular .inner{
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: var(--bg-secundary);
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.circular .numb{
+    font-family: var(--font-family2);
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.circular .bar{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--back-color);
+    border-radius: 100%;
+    clip: rect(0px,100px,100px,50px);
+}
+.circle .bar .progress{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px,50px,100px,0px);
+    background-color: var(--secundary-color);
+}
+.circle .left .progress{
+    z-index: 1;
+    animation: left 2s linear both;
+} 
+.circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+}
+.circle .right .progress{
+    animation: right 2s linear both;
+    animation-delay: 2s;
+} 
