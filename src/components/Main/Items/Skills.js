@@ -1,52 +1,35 @@
-import React from 'react'
+import React from "react";
 
-const Skills = () => {
-    
-    return (
-        <div className='skills'>
-            <div className='skills__title-ctr'>
-                <h2 className='skills__title-ctr__h2'>SKILLS</h2>
-            </div>
-            <div className='skills__border'>
-                <div className='skills__items'>
-                    <div className='skills__items__ctn'>
-                        <p className='skills__items__p'>Java</p>
-                    </div>
-                    <div className='skills__items__bar skills__items__bar--40'></div>
-                    <p className='skills__items__porcent'>0%</p>
-                </div>
-                <div className='skills__items'>
-                    <div className='skills__items__ctn'>
-                        <p className='skills__items__p'>HTML</p>
-                    </div>
-                    <div className='skills__items__bar skills__items__bar--60'></div>
-                    <p className='skills__items__porcent'>0%</p>
-                </div>
-                <div className='skills__items'>
-                    <div className='skills__items__ctn'>
-                        <p className='skills__items__p'>CSS</p>
-                    </div>
-                    <div className='skills__items__bar skills__items__bar--60'></div>
-                    <p className='skills__items__porcent'>0%</p>
-                </div>
-                <div className='skills__items'>
-                    <div className='skills__items__ctn'>
-                        <p className='skills__items__p'>JavaScript</p>
-                    </div>
-                    <div className='skills__items__bar skills__items__bar--40'></div>
-                    <p className='skills__items__porcent'>0%</p>
-                </div>
-                <div className='skills__items'>
-                    <div className='skills__items__ctn'>
-                        <p className='skills__items__p'>React.js</p>
-                    </div>
-                    <div className='skills__items__bar skills__items__bar--30'></div>
-                    <p className='skills__items__porcent'>0%</p>
-                </div>
-            </div>
+import "../Css/skill.css";
 
+const Skills = (props) => {
+  const {
+    data: { name, title, description, icon },
+  } = props;
+  console.log("name: ", name);
+  return (
+    <div className="skills__ctr">
+      <div className="skills__icon">
+        <img
+          className="skills__icon__img"
+          src="../img/icons/JavaW.png"
+          alt=""
+        ></img>
+      </div>
+
+      <h5 className="skills__title">{title}</h5>
+      <h2 className="skills__name">{name}</h2>
+      <p className="skills__description">{description}</p>
+
+      {/*<div className="skills__items">
+        <div className="skills__items__ctn">
+          <p className="skills__items__p">Java</p>
         </div>
-    )
-}
+        <div className="skills__items__bar skills__items__bar--40"></div>
+        <p className="skills__items__porcent">0%</p>
+      </div>*/}
+    </div>
+  );
+};
 
-export default Skills
+export default Skills;

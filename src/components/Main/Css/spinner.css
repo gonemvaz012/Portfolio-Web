@@ -1,3 +1,4 @@
+
 .circular{
     height: 100px;
     width: 100px;
@@ -44,13 +45,15 @@
 }
 .circle .left .progress{
     z-index: 1;
-    animation: left 2s linear both;
+    color:brown;
+    
 } 
 .circle .right {
     z-index: 3;
     transform: rotate(180deg);
 }
-.circle .right .progress{
+/*.circle .right .progress{
     animation: right 2s linear both;
     animation-delay: 2s;
 } 
+*/

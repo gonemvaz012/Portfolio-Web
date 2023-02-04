@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Navbar from './Navbar';
 
 import './Css/Header.css';
 
 const Header = () => {
-
-  const { offsetY, setOffSetY } = useState();
-
-  const handleScroll = () => {
-    return setOffSetY(window.pageYOffset)
-  }
-
-  console.log(offsetY);
-
-  window.addEventListener("scroll", handleScroll);
-  /*return () => window.removeEventListener("scroll", handleScroll);*/
-
-
-
-
 
   return (
     <header className="header">
@@ -26,7 +11,7 @@ const Header = () => {
       <section className="headerbg">
 
         <img src='/img/bg/capa4.png' className='headerbg__img layer4' alt='cielo'></img>
-        <img src='/img/bg/capa3.png' className='headerbg__img layer3' alt='montañas' style={{ transform: `translateY(${offsetY * 0.8}px) ` }}></img>
+        <img src='/img/bg/capa3.png' className='headerbg__img layer3' alt='montañas'></img>
 
         <div className="headerbg__titulo">
           <h1 className="titulo1" >GONZALO EMANUEL VAZQUEZ</h1>
@@ -45,7 +30,7 @@ const Header = () => {
           <img src='/img/logos/React.png' className='headerbg__logos__img' alt=''></img>
         </div>
         <img src='/img/bg/capa2.png' className='headerbg__img layer2' alt='edificios'></img>
-        <img src='/img/bg/capa1.png' className='headerbg__img layer1' alt='edificios' style={{ transform: `translateY(${offsetY * 0.5}px) ` }}></img>
+        <img src='/img/bg/capa1.png' className='headerbg__img layer1' alt='edificios' ></img>
 
       </section>
 

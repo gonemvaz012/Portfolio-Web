@@ -1,6 +1,4 @@
 
-import { click } from '@testing-library/user-event/dist/click';
-import { useState } from 'react';
 
 import './footer.css'
 
@@ -28,11 +26,11 @@ const Footer = () => {
         <div className='footer__ctnr__contact'>
           <h5 className='footer__ctnr__contact__title'>Contacto</h5>
           <div className='footer__ctnr__contact__link'>
-            <a href='/'><i class="fa-brands fa-linkedin"></i></a>
-            <a href='/'><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            <a href='/'><i className="fa-brands fa-linkedin"></i></a>
+            <a href='/'><i className="fa-sharp fa-solid fa-envelope"></i></a>
           </div>
           
-          <p className='footer__ctnr__contact__phone'><i class="fa-solid fa-phone"></i><span> +54 15 2613070313</span></p>
+          <p className='footer__ctnr__contact__phone'><i className="fa-solid fa-phone"></i><span> +54 15 2613070313</span></p>
         </div>
         {/*<span onClick={handleClick}>
           <img src='favicon.ico' alt=''></img>

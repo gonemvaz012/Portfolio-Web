@@ -1,10 +1,5 @@
 :root{
-    --font-family1: HelveticaNeue;
-    src: url(../Css/Helvetica\ Neu\ Bold.ttf);
-    --font-family2: 'Futura Md Bt';
-    src: url(../Css/futuraMdBt.ttf);
-    --font-Bison:Bison;
-    src: url(../Css/Bison-Bold.ttf);
+
     --font-Jost:'Jost', sans-serif;;
     
 }
