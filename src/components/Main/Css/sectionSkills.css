@@ -19,8 +19,16 @@
 .skills__border {
     width: 100%;
     height: auto;
-    padding: 26px 30px 16px;
     border: 1px solid var(--secundary-color);
+}
+.skills__carrousel{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.skills__slideL{
+    width: 88px;
+    height: 100%;
 }
 
 .skills__title-ctr,

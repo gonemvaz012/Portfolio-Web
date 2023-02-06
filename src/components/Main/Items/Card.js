@@ -1,25 +1,25 @@
 import React from "react";
 
-import "../Css/skill.css";
+import "../Css/card.css";
 
-const Skills = (props) => {
+const Card = (props) => {
   const {
     data: { name, title, description, icon },
   } = props;
-  console.log("name: ", name);
+
   return (
-    <div className="skills__ctr">
-      <div className="skills__icon">
+    <div className="card__ctr">
+      <div className="card__icon">
         <img
-          className="skills__icon__img"
-          src="../img/icons/JavaW.png"
+          className="card__icon__img"
+          src={icon}
           alt=""
         ></img>
       </div>
 
-      <h5 className="skills__title">{title}</h5>
-      <h2 className="skills__name">{name}</h2>
-      <p className="skills__description">{description}</p>
+      <h5 className="card__title">{title}</h5>
+      <h2 className="card__name">{name}</h2>
+      <p className="card__description">{description}</p>
 
       {/*<div className="skills__items">
         <div className="skills__items__ctn">
@@ -32,4 +32,4 @@ const Skills = (props) => {
   );
 };
 
-export default Skills;
+export default Card;

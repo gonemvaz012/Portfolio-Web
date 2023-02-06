@@ -4,7 +4,7 @@
             "name":"Java",
             "title":"Back-end develop",
             "description":"Desarrollo de microservicios con spring boot implementando  patron de diseño MVC para el funcionamiento del CRUD en  paginas web ",
-            "icon":"../../icons/JavaW.png"
+            "icon":"img/icons/JavaW.png"
         },
         {
             "name":"HTML-CSS",
