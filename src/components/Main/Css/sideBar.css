@@ -1,3 +1,13 @@
+:root{
+    --font-Jost:'Jost', sans-serif;
+    --font-Fira-sans:'Fira Sans', sans-serif;
+    --border-color: #707070;
+    --back-color: #1C1C1C;
+    --bg-dark-color: #1D1D1D;
+    --bg-secundary: #262626;
+    --secundary-color: #13B7FF;
+    
+}
 .aside {
     grid-area: SideBar;
     width: 100%;
@@ -20,6 +30,7 @@
     position: absolute;
     top: 0;
     left: 30px;
+    overflow: hidden;
 }
 
 .photo-Container__div {
@@ -37,6 +48,9 @@
 }
 
 .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     min-width: 388px;
     height: 623px;
@@ -46,16 +60,35 @@
 }
 
 .text-container__h1 {
-    font-family: var(--font-family1);
+    font-family: var(--font-Jost);
+    font-weight: 200;
     font-size: 2.2rem;
     color: var(--secundary-color);
     margin-top: 160px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .text-container__p {
-    font-family: var(--font-family1);
+    font-family: var(--font-Fira-sans);
     font-size: 1.1rem;
-    font-weight: lighter;
+    font-weight: 200;
     color: white;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+#btn-download{
+    max-width: 150px;
+    background-color: transparent;
+    border: 1px solid var(--secundary-color);
+    color: var(--secundary-color);
+    padding: 10px;
+    font-family: var(--font-Jost);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+#btn-download:hover{
+    background-color: var(--secundary-color);
+    color: var(--bg-secundary);
+    transition: all 500ms ease-in-out ;
 }

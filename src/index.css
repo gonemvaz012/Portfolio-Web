@@ -4,6 +4,8 @@
     --bg-dark-color: #1D1D1D;
     --bg-secundary: #262626;
     --secundary-color: #13B7FF;
+    --font-Jost:'Jost', sans-serif;
+    --font-Fira-sans:'Fira Sans', sans-serif;
     --transition: all 400ms ease-in-out;
     --bar-lenght: 0%;
 }

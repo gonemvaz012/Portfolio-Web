@@ -89,30 +89,7 @@
     left: 0;
     object-fit: cover;
 }
-.sectionPf{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 1080px;
-    min-height: 110vh;
-    position: relative;
-}
-.sectionPf__bg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-.sectionPf__h1{
-    font-size: 3.1rem;
-    font-family: var(--font-family1);
-    color: var(--secundary-color);
-    margin-bottom: 250px;
-}
+
 .layer1 {
     z-index: 4;
 }

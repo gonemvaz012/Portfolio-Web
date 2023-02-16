@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import "../Css/card.css";
 
 const Card = (props) => {
@@ -8,13 +8,14 @@ const Card = (props) => {
   } = props;
 
   return (
-    <div className="card__ctr">
+    <motion.div
+      className="card__ctr"
+      initial={{ opacity: 0, y: `5%` }}
+      whileInView={{ opacity: 1, y: `0%` }}
+      transition={{ duration: 0.6, type: "tween", delay: 0.2 }}
+    >
       <div className="card__icon">
-        <img
-          className="card__icon__img"
-          src={icon}
-          alt=""
-        ></img>
+        <img className="card__icon__img" src={icon} alt=""></img>
       </div>
 
       <h5 className="card__title">{title}</h5>
@@ -28,7 +29,7 @@ const Card = (props) => {
         <div className="skills__items__bar skills__items__bar--40"></div>
         <p className="skills__items__porcent">0%</p>
       </div>*/}
-    </div>
+    </motion.div>
   );
 };
 

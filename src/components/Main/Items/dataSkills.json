@@ -10,19 +10,19 @@
             "name":"HTML-CSS",
             "title":"Front-end develop",
             "description":"Diseño de vistas y maquetación de paginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
-            "icon":"/src/components/Main/icons/JavaW.png"
+            "icon":"img/icons/Html-Css.png"
         },
         {
             "name":"JavaScript",
             "title":"Front-end develop",
             "description":"Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
-            "icon":"/src/components/Main/icons/JavaW.png"
+            "icon":"img/icons/JS.png"
         },
         {
             "name":"React Js",
             "title":"Front-end develop",
             "description":"Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
-            "icon":"/src/components/Main/icons/JavaW.png"
+            "icon":"img/icons/React.png"
         }
     ]
 }

@@ -1,0 +1,41 @@
+.carrouselPf{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.carrouselPf__arrowR,
+.carrouselPf__arrowL{
+    font-size: 2rem;
+    color: rgb(184, 182, 182);
+
+}
+.carrouselPf__arrowL{
+    position: absolute;
+    top: 50%;
+    left: -2%;
+}
+.carrouselPf__arrowR{
+    position: absolute;
+    top: 50%;
+    right: -2%;
+}
+.carrouselPf__screen{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.carrouselPf__view{
+    height: 100%;
+    display: flex;
+}
+.carrouselPf__img-ctr{
+    width: 100%;
+    height: 100%;
+}
+.carrouselPf__img-ctr img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

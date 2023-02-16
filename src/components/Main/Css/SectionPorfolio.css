@@ -1,18 +1,57 @@
+:root{
+    --font-Jost:'Jost', sans-serif;
+    --font-Fira-sans:'Fira Sans', sans-serif;
+    --border-color: #707070;
+    --back-color: #1C1C1C;
+    --bg-dark-color: #1D1D1D;
+    --bg-secundary: #262626;
+    --secundary-color: #13B7FF;
+    
+}
+.sectionPf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1080px;
+    min-height: 110vh;
+    position: relative;
+}
+.sectionPf__bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.sectionPf__works__ctr{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.sectionPf__h1{
+    font-size: 3.1rem;
+    font-family: var(--font-Jost);
+    color: var(--secundary-color);
+    margin-bottom: 110px;
+}
 
 .sectionPf__works{
     display: grid;
-    gap: 30px;
     grid-template:
-        "thumbnail Description" auto /
+        "thumbnail thumbnail" auto 
+        "Description Description" auto/
         auto ;
     place-content: center;
 }
 .sectionPf__works__photo{
     grid-area: thumbnail;
-    width: 100%;
-    max-width: 206px;
-    height: 100%;
-    max-height: 206px;
+    width: 613px;
+    height: 429px;
+    background-color: #1D1D1D;
+    
 }
 .sectionPf__works__photo__img{
     width: 100%;
@@ -21,20 +60,55 @@
 }
 .sectionPf__works__ctnr{
     grid-area: Description;
-    height: 100%;
-    max-height: 318px;
+    display: flex;
+    justify-content: space-around;
+    height: 429px;
+    width: 613px;
+    padding: 50px;
+    background-color: #11262e75;
+}
+          
+.sectionPf__works__ctnr__lg{
+    width: 159px;
+    height: auto;
+}
+.sectionPf__works__ctnr__lg__img{
+   height: 130px;
+}
+.sectionPf__works__ctnr__dcrpt{
     width: 100%;
-    max-width: 531px;
+    max-width: 316px;
+}
+.sectionPf__works__ctnr__h5{
+    color: var(--secundary-color);
+    font-family: var(--font-Fira-sans);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 .sectionPf__works__ctnr__h2{
     color: white;
-    font-size: 1.5rem;
+    font-family: var(--font-Fira-sans);
+    font-weight: 400;
+    font-size: 2.2rem;
     margin-bottom: 10px;
 }
 .sectionPf__works__ctnr__p{
-    color: white;
+    color: var(--secundary-color);
+    font-family: var(--font-Fira-sans);
+    font-weight: 200;
     font-size: 1.2rem;
     margin-bottom: 20px;
+    text-align: justify;
+}
+.sectionPf-video{
+    height: 859px;
+    display: flex;
+    align-items: flex-end;
+}
+.sectionPf-video__screen{
+    width: 688px;
+    height: 429px;
+    background-color: #1D1D1D;
 }
 .btn-enter{
     background: none;
