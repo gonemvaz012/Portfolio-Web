@@ -8,6 +8,7 @@ const CarrouselPf = (props) => {
   let [x, setX] = useState(0);
   let [pos, setPos] = useState(-1);
   const animationR = useAnimation();
+  const animationL = useAnimation();
   //style propiety
   let style;
   //variables
@@ -31,16 +32,24 @@ const CarrouselPf = (props) => {
         },
       });
     }
-    console.log(pos);
   };
 
-  const slidel = () => {
+  const slideL = () => {
+    if (pos === -2) {
+      animationL.start({
+        opacity: 1,
+        display: "flex",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
     if (pos < amount) {
-      setPos(pos + 1);
+      if (pos != 1) setPos(pos + 1);
       setX(pos * porcent);
     }
-    if (pos === -3) {
-      animationR.start({
+    if (pos === -1) {
+      animationL.start({
         opacity: 0,
         display: "none",
         transition: {
@@ -48,7 +57,6 @@ const CarrouselPf = (props) => {
         },
       });
     }
-    console.log(pos);
   };
 
   //genera el div con  la imagen
@@ -83,8 +91,8 @@ const CarrouselPf = (props) => {
       <motion.span
         className="carrouselPf__arrowL"
         initial={{ opacity: 0, display: "none" }}
-        onClick={() => slideR()}
-        style={style}
+        onClick={() => slideL()}
+        animate={animationR}
       >
         <i className="fa-solid fa-circle-arrow-left"></i>
       </motion.span>
