@@ -8,17 +8,17 @@
 .carrouselPf__arrowR,
 .carrouselPf__arrowL{
     font-size: 2rem;
-    color: rgb(184, 182, 182);
-
+    color: rgb(11, 140, 190);
+    z-index: 999;
 }
 .carrouselPf__arrowL{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: -2%;
 }
 .carrouselPf__arrowR{
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: -2%;
 }
 .carrouselPf__screen{
@@ -27,11 +27,51 @@
     overflow: hidden;
 }
 .carrouselPf__view{
-    height: 100%;
+    width: 200%;
     display: flex;
 }
-.carrouselPf__img-ctr{
+.sectionPf__works__ctnr{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 50px;
+    background-color: #11262e75;
+}
+          
+.sectionPf__works__ctnr__lg{
+    width: 159px;
+    height: auto;
+}
+.sectionPf__works__ctnr__lg__img{
+   height: 130px;
+}
+.sectionPf__works__ctnr__dcrpt{
     width: 100%;
+    max-width: 316px;
+}
+.sectionPf__works__ctnr__h5{
+    color: var(--secundary-color);
+    font-family: var(--font-Fira-sans);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.sectionPf__works__ctnr__h2{
+    color: white;
+    font-family: var(--font-Fira-sans);
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+.sectionPf__works__ctnr__p{
+    color: var(--secundary-color);
+    font-family: var(--font-Fira-sans);
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.carrouselPf__img-ctr{
+    width: 50%;
     height: 100%;
 }
 .carrouselPf__img-ctr img{
