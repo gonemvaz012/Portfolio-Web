@@ -15,7 +15,7 @@ const SectionPorfolio = () => {
       ></img>
       <img
         src="/img/bg/Condor.png"
-        className="sectionPf__bg condor layer3"
+        className="sectionPf__bg layer3"
         alt=""
       ></img>
       <h1 className="sectionPf__h1 layer1">PORFOLIO</h1>
