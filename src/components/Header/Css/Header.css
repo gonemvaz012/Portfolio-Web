@@ -79,6 +79,7 @@
     position: relative;
     padding: 50px 47px 10px 320px;
     margin: 0px 30px;
+    overflow: hidden;
 }
 
 .headerbg__img {
@@ -89,7 +90,9 @@
     left: 0;
     object-fit: cover;
 }
-
+.montains{
+    width: 1924px;
+}
 .layer1 {
     z-index: 4;
 }
@@ -132,7 +135,20 @@
     margin-bottom: 10px;
     /*transform: translate(220px, 20px);*/
 }
-
+.titulo0{
+    font-family: var(--font-Jost);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    z-index: 1;
+}
+.titulo1-ctnr{
+    padding: 5px 10px;
+    background-color: #1c1c1c90;
+    overflow: hidden;
+}
 .titulo1 {
     font-family: var(--font-Jost);
     color: var(--secundary-color);
