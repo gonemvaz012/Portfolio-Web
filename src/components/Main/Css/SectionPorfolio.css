@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1920px;
     height: 1080px;
     min-height: 110vh;
     position: relative;
@@ -34,10 +33,14 @@
     justify-content: space-around;
 }
 .sectionPf__h1{
-    font-size: 3.1rem;
+    font-size: 10.2rem;
     font-family: var(--font-Jost);
     color: var(--secundary-color);
     margin-bottom: 110px;
+    position: absolute;
+    top: 15%;
+    right: 14%;
+    z-index:-2;
 }
 
 .sectionPf__works{
@@ -49,7 +52,7 @@
 
 
 .sectionPf-video{
-    height: 600px;
+    height: 650px;
     display: flex;
     align-items: flex-end;
 }
@@ -69,4 +72,7 @@
 .btn-enter:hover{
     background-color: var(--secundary-color);
     color: var(--bg-dark-color);
+}
+.condor{
+    top:100px;
 }
