@@ -39,8 +39,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      
+    <header className="header" id="home">
       <section className="headerbg">
         <LayerBG
           src="/img/bg/capa4.png"
@@ -87,9 +86,12 @@ const Header = () => {
             </motion.h1>
           </motion.div>
 
-          <motion.div className="box-titulo2" initial={{opacity:0}} 
-          animate={{opacity:1}}
-          transition={{delay:6,duration:1.5}}>
+          <motion.div
+            className="box-titulo2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 6, duration: 1.5 }}
+          >
             <motion.h2
               className="titulo2"
               initial={{ opacity: 0 }}
@@ -98,7 +100,7 @@ const Header = () => {
                 opacity: {
                   duration: 1,
                   delay: 6,
-                  ease:easeInOut,
+                  ease: easeInOut,
                   repeat: Infinity,
                   repeatType: "loop",
                   repeatDelay: 1,
@@ -115,7 +117,7 @@ const Header = () => {
                 opacity: {
                   duration: 1,
                   delay: 6.5,
-                  ease:easeInOut,
+                  ease: easeInOut,
                   repeat: Infinity,
                   repeatType: "loop",
                   repeatDelay: 1,
@@ -132,7 +134,7 @@ const Header = () => {
                 opacity: {
                   duration: 1,
                   delay: 7,
-                  ease:easeInOut,
+                  ease: easeInOut,
                   repeat: Infinity,
                   repeatType: "loop",
                   repeatDelay: 1,

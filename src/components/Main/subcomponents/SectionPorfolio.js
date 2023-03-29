@@ -69,7 +69,7 @@ const SectionPorfolio = () => {
         },
       });
     }
-  }, [inView,fadeInPf,fadeInPfV]);
+  }, [inView, fadeInPf, fadeInPfV]);
 
   //creo el fondo condor parallax scroll
   const Porfoliobg = (props) => {
@@ -86,7 +86,7 @@ const SectionPorfolio = () => {
         className="sectionPf__bg layer3 condor"
         src={img}
         alt=""
-        initial={{ opacity: 0}}
+        initial={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
         whileInView={{ opacity: 1 }}
         style={{ y: yValue }}
@@ -97,7 +97,7 @@ const SectionPorfolio = () => {
 
   //SECTION PORFOLIO SECTION PORFOLIO
   return (
-    <section className="sectionPf">
+    <section className="sectionPf" id="portfolio">
       <img
         src="/img/bg/cerros.png"
         className="sectionPf__bg layer4"
