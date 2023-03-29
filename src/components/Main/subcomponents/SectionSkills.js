@@ -9,7 +9,7 @@ const SectionSkills = (props) => {
   const { inView } = props;
 
   return (
-    <section className="sectionSkills">
+    <section className="sectionSkills" id='skills'>
       <Skill inView={inView} animation={{ x: 20, y: 0 }} />
       <Tools inView={inView} animation={{ x: 0, y: -30 }} />
       <Aptitudes inView={inView} animation={{ x: 0, y: 40 }} />

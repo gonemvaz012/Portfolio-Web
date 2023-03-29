@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import "../Css/SectionPorfolio.css";
 import CarrouselP from "../Items/CarrouselP";
@@ -12,8 +12,8 @@ const SectionPorfolio = () => {
     const { speed } = prop;
     const xvalue = useTransform(
       scrollYProgress,
-      [0, 0.7, 1],
-      [0, 70, 100 * speed]
+      [0, 0.6, 0.8],
+      [0, 60, 80 * speed]
     );
     return (
       <motion.h1
@@ -69,7 +69,7 @@ const SectionPorfolio = () => {
         },
       });
     }
-  }, [inView]);
+  }, [inView,fadeInPf,fadeInPfV]);
 
   //creo el fondo condor parallax scroll
   const Porfoliobg = (props) => {
@@ -77,8 +77,8 @@ const SectionPorfolio = () => {
 
     const yValue = useTransform(
       scrollYProgress,
-      [0, 0.7, 1],
-      [0, 70, 100 * speed]
+      [0, 0.5, 1],
+      [0, 50, 100 * speed]
     );
 
     return (
@@ -86,8 +86,8 @@ const SectionPorfolio = () => {
         className="sectionPf__bg layer3 condor"
         src={img}
         alt=""
-        initial={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0}}
+        transition={{ duration: 0.2 }}
         whileInView={{ opacity: 1 }}
         style={{ y: yValue }}
       ></motion.img>
@@ -103,8 +103,8 @@ const SectionPorfolio = () => {
         className="sectionPf__bg layer4"
         alt=""
       ></img>
-      <Porfoliobg img="/img/bg/Condor.png" speed={-2} />
-      <TituloPf speed={2} />
+      <Porfoliobg img="/img/bg/Condor.png" speed={-3.3} />
+      <TituloPf speed={3} />
       <div className="sectionPf__works__ctr">
         <motion.div
           className="sectionPf__works"

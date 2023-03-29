@@ -1,50 +1,27 @@
 import React from 'react'
 import { useState } from 'react';
+import {Link} from 'react-scroll';
 
 import './Css/Header.css'
 
 const Navbar = () => {
 
-  /*let heightS = { height: '600px' }
-  let buttonDown = {
-    visibility: 'hidden',
-    opacity: '0'
-  };
+  const [click,setClick]= useState(false);
 
-  const [dropdown, setDropdown] = useState(true);
-
-  const handleClick = () => {
-
-    setDropdown(!dropdown);
-  }
-
-  (dropdown ? toDown() : toUp());
-
-  function toUp() {
-    heightS = { height: '60px' };
-    setTimeout(() => {
-      buttonDown = { visibility: 'visible', opacity: '1' };
-      console.log("funciona el setTime");
-    }, 1000);
-
-  }
-  function toDown() {
-    heightS = { height: '600px' };
-    setTimeout(() => {
-      buttonDown = { visibility: 'hidden', opacity: '0' };
-    }, 1000);
-
-  }*/
+  const toElement= ()=>setClick(false);
 
   return (
     <nav className="nav-menu">
       <img className="nav-menu__logo" src="/img/condorLogoW.png" alt="" />
       <div className="nav-menu__items">
         <div className="nav-menu__items__div" id="div1"></div>
-        <a href="/" className="nav-link">INICIO</a>
+        <Link  className="nav-link"
+         activeClass="active" to="skills" 
+         spy={true} smooth={true} offset={50} duration={500} onClick={toElement}>INICIO</Link>
         <a href="/" className="nav-link">SOBRE MI</a>
         <a href="/" className="nav-link">SKILLS</a>
         <a href="/" className="nav-link">PORFOLIO</a>
+        <a href="/" className="nav-link">CONTACTO</a>
       </div>
       <div className="nav-menu__bars"><i className="fa-solid fa-bars"></i></div>
     </nav>

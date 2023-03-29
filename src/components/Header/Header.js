@@ -1,11 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+
 import {
   motion,
   useScroll,
   useTransform,
   useAnimation,
   easeOut,
+  easeInOut,
 } from "framer-motion";
 
 import "./Css/Header.css";
@@ -39,7 +40,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Navbar />
+      
       <section className="headerbg">
         <LayerBG
           src="/img/bg/capa4.png"
@@ -86,18 +87,21 @@ const Header = () => {
             </motion.h1>
           </motion.div>
 
-          <div className="box-titulo2">
+          <motion.div className="box-titulo2" initial={{opacity:0}} 
+          animate={{opacity:1}}
+          transition={{delay:6,duration:1.5}}>
             <motion.h2
               className="titulo2"
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0.7, 1, 0.7] }}
+              animate={{ opacity: [0.6, 1, 0.6] }}
               transition={{
                 opacity: {
-                  duration: 2,
+                  duration: 1,
                   delay: 6,
+                  ease:easeInOut,
                   repeat: Infinity,
                   repeatType: "loop",
-                  repeatDelay: 2,
+                  repeatDelay: 1,
                 },
               }}
             >
@@ -106,36 +110,38 @@ const Header = () => {
             <motion.h2
               className="titulo2"
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.6, 0] }}
+              animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{
                 opacity: {
-                  duration: 2,
+                  duration: 1,
+                  delay: 6.5,
+                  ease:easeInOut,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  repeatDelay: 1,
+                },
+              }}
+            >
+              FRONT END DEVELOPER
+            </motion.h2>
+            <motion.h2
+              className="titulo2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0.3, 1, 0.3] }}
+              transition={{
+                opacity: {
+                  duration: 1,
                   delay: 7,
+                  ease:easeInOut,
                   repeat: Infinity,
                   repeatType: "loop",
-                  repeatDelay: 2,
+                  repeatDelay: 1,
                 },
               }}
             >
               FRONT END DEVELOPER
             </motion.h2>
-            <motion.h2
-              className="titulo2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.3, 0] }}
-              transition={{
-                opacity: {
-                  duration: 2,
-                  delay: 8,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  repeatDelay: 2,
-                },
-              }}
-            >
-              FRONT END DEVELOPER
-            </motion.h2>
-          </div>
+          </motion.div>
         </div>
 
         <motion.div

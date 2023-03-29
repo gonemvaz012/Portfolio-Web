@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SectionPorfolio from "./subcomponents/SectionPorfolio";
 import SectionSkills from "./subcomponents/SectionSkills";
 import SideBar from "./subcomponents/SideBar";
+import SectionContact from "./subcomponents/SectionContact";
 
 import { useInView } from "react-intersection-observer";
 
@@ -44,6 +45,7 @@ const Main = () => {
         <SectionSkills inView={inView} />
       </section>
       <SectionPorfolio />
+      <SectionContact/>
     </main>
   );
 };
