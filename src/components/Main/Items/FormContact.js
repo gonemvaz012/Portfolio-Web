@@ -1,10 +1,45 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../Css/formContact.css'
 
 const FormContact = () => {
+    const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  function enviarFormulario(e) {
+    e.preventDefault();
+
+    // Verificar que los campos no estén vacíos
+    if (nombre === "" || mensaje === "" || !validarEmail(email)) {
+      alert("Por favor, completa todos los campos correctamente.");
+      return;
+    }
+
+    // Configurar los datos del correo electrónico
+    const destinatario = "tu_correo@ejemplo.com";
+    const asunto = "Mensaje de " + nombre;
+    const cuerpoMensaje = "Nombre: " + nombre + "\n\nEmail: " + email + "\n\nMensaje:\n" + mensaje;
+
+    // Enviar el correo electrónico
+    window.open("mailto:" + destinatario + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpoMensaje));
+
+    // Mostrar mensaje de éxito
+    alert("Tu mensaje ha sido enviado con éxito.");
+
+    // Restablecer el formulario
+    setNombre("");
+    setEmail("");
+    setMensaje("");
+  }
+
+  function validarEmail(email) {
+    // Utilizar una expresión regular para validar la dirección de correo electrónico
+    const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return patronEmail.test(email);
+  }
   return (
     <div className='formContact-ctnr'>
-        <form action="mailto:ejemplo@ejemplo.com" method="post" enctype="text/plain" className='formContact-ctnr__form'>
+        <form onSubmit={enviarFormulario} className='formContact-ctnr__form'>
             <div className='formContact-ctnr__form__border'>
             <h2 className='formContact-ctnr__form__title'>Envíame un mensaje</h2>
             <div className='formContact-ctnr__form__input'>

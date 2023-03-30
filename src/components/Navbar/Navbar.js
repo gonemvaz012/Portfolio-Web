@@ -2,16 +2,23 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-scroll";
 
-import "./Css/Header.css";
+import "./Css/navbar.css";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
   const toElement = () => setClick(false);
 
+  const reload = ()=>{
+    window.location.reload()
+   
+  } 
+
   return (
     <nav className="nav-menu">
-      <img className="nav-menu__logo" src="/img/condorLogoW.png" alt="" />
+        
+      <img className="nav-menu__logo" src="/img/condorLogoW.png" alt="" onClick={reload}/>
+        
       <div className="nav-menu__items">
         <div className="nav-menu__items__div" id="div1"></div>
         <Link

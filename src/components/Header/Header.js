@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <header className="header" id="home">
-      <section className="headerbg">
+      <motion.section className="headerbg" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5}}>
         <LayerBG
           src="/img/bg/capa4.png"
           speedY={3}
@@ -187,7 +187,7 @@ const Header = () => {
         />
         {/*<img src='/img/bg/capa2.png' className='headerbg__img layer2' alt='edificios'></img>
         <img src='/img/bg/capa1.png' className='headerbg__img layer1' alt='edificios' ></img>*/}
-      </section>
+      </motion.section>
     </header>
   );
 };
