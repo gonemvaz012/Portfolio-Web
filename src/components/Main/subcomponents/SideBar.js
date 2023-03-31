@@ -1,20 +1,28 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "../Css/sideBar.css";
 
-const SideBar = (props) => {
-  const { photoAnima } = props;
+const SideBar = () => {
+  const { scrollYProgress } = useScroll();
+  //foto perfil
+  const PhotoP = (prop) => {
+    const { speed } = prop;
+    const xvalue = useTransform(scrollYProgress, [0, 0.5], [0, 50 * speed]);
+    return (
+      <motion.div className="photo-Container__div" style={{ x: xvalue }}>
+        <img
+          className="photo-Container__div__img"
+          src="../img/fotoHome2.jpg"
+          alt="fotoPorfolio"
+        ></img>
+      </motion.div>
+    );
+  };
 
   return (
     <aside className="aside">
       <div className="photo-Container">
-        <motion.div className="photo-Container__div" animate={photoAnima}>
-          <img
-            className="photo-Container__div__img"
-            src="../img/fotoHome2.jpg"
-            alt="fotoPorfolio"
-          ></img>
-        </motion.div>
+        <PhotoP speed={-1} />
       </div>
       <div className="text-container">
         <motion.h1
