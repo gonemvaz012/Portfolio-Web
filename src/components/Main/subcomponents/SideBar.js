@@ -7,7 +7,7 @@ const SideBar = () => {
   //foto perfil
   const PhotoP = (prop) => {
     const { speed } = prop;
-    const xvalue = useTransform(scrollYProgress, [0, 0.5], [0, 50 * speed]);
+    const xvalue = useTransform(scrollYProgress, [0, 0.3], [0, 30 * speed]);
     return (
       <motion.div className="photo-Container__div" style={{ x: xvalue }}>
         <img
@@ -22,7 +22,7 @@ const SideBar = () => {
   return (
     <aside className="aside">
       <div className="photo-Container">
-        <PhotoP speed={-1} />
+        <PhotoP speed={-11} />
       </div>
       <div className="text-container">
         <motion.h1

@@ -40,6 +40,9 @@
     overflow: hidden;
     background-color: #13B7FF;
     border: 5px solid var(--bg-secundary);
+    position: absolute;
+    top: 0;
+    left: 340px;
   
 }
 

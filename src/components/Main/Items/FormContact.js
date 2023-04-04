@@ -1,36 +1,73 @@
-import React,{useState} from 'react'
-import '../Css/formContact.css'
+import React, { useState } from "react";
+import "../Css/formContact.css";
 
 const FormContact = () => {
-    const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [mensaje, setMensaje] = useState("");
-
-  function enviarFormulario(e) {
-    e.preventDefault();
-
+  //declaracion hook de objetos datos form
+  const [datos, setDatos] = useState({
+    nombre: "",
+    email: "",
+    asunto: "",
+    mensaje: "",
+  });
+  const [stateBtn, setStateBtn] = useState(true);
+  const [classBtn, setClassBtn] = useState("--disableBtn");
+  //función para validar los datos ingresados
+  function validarFormulario(datos) {
     // Verificar que los campos no estén vacíos
-    if (nombre === "" || mensaje === "" || !validarEmail(email)) {
-      alert("Por favor, completa todos los campos correctamente.");
+    if (
+      datos.nombre === "" ||
+      datos.email === "" ||
+      datos.asunto === "" ||
+      datos.mensaje === "" ||
+      !validarEmail(datos.email)
+    ) {
+      alert("Por favor, complete todos los campos correctamente.");
       return;
     }
-
+    return true;
+  }
+  function enviarFormulario(e) {
     // Configurar los datos del correo electrónico
-    const destinatario = "tu_correo@ejemplo.com";
-    const asunto = "Mensaje de " + nombre;
-    const cuerpoMensaje = "Nombre: " + nombre + "\n\nEmail: " + email + "\n\nMensaje:\n" + mensaje;
+    const Destinatario = "gonemvaz012@gmail.com";
+    const Asunto = "Mensaje de " + datos.nombre + ": " + datos.asunto;
+    const cuerpoMensaje =
+      "Nombre: " +
+      datos.nombre +
+      "\n\nEmail: " +
+      datos.email +
+      "\n\n" +
+      datos.mensaje;
 
     // Enviar el correo electrónico
-    window.open("mailto:" + destinatario + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(cuerpoMensaje));
 
+    /*window.open(
+      "mailto:" +
+        Destinatario +
+        "?subject=" +
+        encodeURIComponent(Asunto) +
+        "&body=" +
+        encodeURIComponent(cuerpoMensaje)
+    );*/
     // Mostrar mensaje de éxito
     alert("Tu mensaje ha sido enviado con éxito.");
 
     // Restablecer el formulario
-    setNombre("");
-    setEmail("");
-    setMensaje("");
+    setDatos("");
   }
+
+  const onChangeInput = (e) => {
+    setDatos({
+      ...datos,
+      [e.target.name]: e.target.value,
+    });
+    if (validarFormulario(datos)) {
+      setClassBtn("");
+      setStateBtn(false);
+    } else {
+      setClassBtn("--disableBtn");
+      setStateBtn(true);
+    }
+  };
 
   function validarEmail(email) {
     // Utilizar una expresión regular para validar la dirección de correo electrónico
@@ -38,35 +75,44 @@ const FormContact = () => {
     return patronEmail.test(email);
   }
   return (
-    <div className='formContact-ctnr'>
-        <form onSubmit={enviarFormulario} className='formContact-ctnr__form'>
-            <div className='formContact-ctnr__form__border'>
-            <h2 className='formContact-ctnr__form__title'>Envíame un mensaje</h2>
-            <div className='formContact-ctnr__form__input'>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre"></input>
-            </div>
-            <div className='formContact-ctnr__form__input'> 
-                <label for="email">Correo Electronico</label>
-                <input type="email"  name="email"></input>
-                
-            </div>
-             <div className='formContact-ctnr__form__input'>
-                <label for="subject">Asunto</label>
-                <input type="text" name="subject"></input>
-            </div>
-            <div className='formContact-ctnr__form__textarea'>
-                <label for="email">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="10" cols="50"></textarea>
-            </div>
-            <div className='formContact-ctnr__form__sutmit'>
-                <button>Enviar</button>
-            </div>
-            </div>
-            
-        </form>
-      </div>
-  )
-}
+    <div className="formContact-ctnr">
+      <form
+        action="https://formsubmit.co/gonemvaz012@gmail.com"
+        method="POST"
+        onSubmit={enviarFormulario}
+        className="formContact-ctnr__form"
+      >
+        <div className="formContact-ctnr__form__border">
+          <h2 className="formContact-ctnr__form__title">Envíame un mensaje</h2>
+          <div className="formContact-ctnr__form__input">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" onChange={onChangeInput}></input>
+          </div>
+          <div className="formContact-ctnr__form__input">
+            <label for="email">Correo Electronico</label>
+            <input type="email" name="email" onChange={onChangeInput}></input>
+          </div>
+          <div className="formContact-ctnr__form__input">
+            <label for="subject">Asunto</label>
+            <input type="text" name="asunto" onChange={onChangeInput}></input>
+          </div>
+          <div className="formContact-ctnr__form__textarea">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="10"
+              cols="50"
+              onChange={onChangeInput}
+            ></textarea>
+          </div>
+          <div className={"formContact-ctnr__form__sutmit" + classBtn}>
+            <button disabled={stateBtn}>Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-export default FormContact
+export default FormContact;
