@@ -21,8 +21,7 @@ const FormContact = () => {
       datos.mensaje === "" ||
       !validarEmail(datos.email)
     ) {
-      alert("Por favor, complete todos los campos correctamente.");
-      return;
+      return false;
     }
     return true;
   }
@@ -55,6 +54,12 @@ const FormContact = () => {
     setDatos("");
   }
 
+  function validarEmail(email) {
+    // Utilizar una expresión regular para validar la dirección de correo electrónico
+    const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return patronEmail.test(email);
+  }
+
   const onChangeInput = (e) => {
     setDatos({
       ...datos,
@@ -69,11 +74,7 @@ const FormContact = () => {
     }
   };
 
-  function validarEmail(email) {
-    // Utilizar una expresión regular para validar la dirección de correo electrónico
-    const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return patronEmail.test(email);
-  }
+
   return (
     <div className="formContact-ctnr">
       <form
@@ -101,6 +102,7 @@ const FormContact = () => {
             <textarea
               id="mensaje"
               name="mensaje"
+              type="text"
               rows="10"
               cols="50"
               onChange={onChangeInput}
