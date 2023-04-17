@@ -105,17 +105,13 @@
     border-color: var(--secundary-color);
     transition: all 300ms ease-in-out;
 }
-.formContact-ctnr__form__sutmit,
-.formContact-ctnr__form__sutmit--disableBtn{
+.formContact-ctnr__form__sutmit{
     display: flex;
     width: 90%;
     justify-content: center;
 }
-.formContact-ctnr__form__sutmit--disableBtn{
-    opacity: 0.2;
-}
-.formContact-ctnr__form__sutmit>button,
-.formContact-ctnr__form__sutmit--disableBtn>button{
+
+.formContact-ctnr__form__sutmit>button{
     width:80%;
     padding: 5px;
     margin-bottom: 15px;

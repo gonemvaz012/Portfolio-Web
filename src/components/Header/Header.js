@@ -40,7 +40,12 @@ const Header = () => {
 
   return (
     <header className="header" id="home">
-      <motion.section className="headerbg" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5}}>
+      <motion.section
+        className="headerbg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <LayerBG
           src="/img/bg/capa4.png"
           speedY={3}
@@ -154,22 +159,22 @@ const Header = () => {
         >
           <div className="headerbg__logos__ctnr">
             <span>
-              <i class="fa-brands fa-html5"></i>
+              <i className="fa-brands fa-html5"></i>
             </span>
           </div>
           <div className="headerbg__logos__ctnr">
             <span>
-              <i class="fa-brands fa-css3-alt"></i>
+              <i className="fa-brands fa-css3-alt"></i>
             </span>
           </div>
           <div className="headerbg__logos__ctnr">
             <span>
-              <i class="fa-brands fa-js"></i>
+              <i className="fa-brands fa-js"></i>
             </span>
           </div>
           <div className="headerbg__logos__ctnr">
             <span>
-              <i class="fa-brands fa-react"></i>
+              <i className="fa-brands fa-react"></i>
             </span>
           </div>
         </motion.div>
