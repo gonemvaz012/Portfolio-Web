@@ -1,28 +1,28 @@
 {
-    "skill":[
-        {
-            "name":"Java",
-            "title":"Back-end develop",
-            "description":"Desarrollo de microservicios con spring boot implementando  patron de diseño MVC para el funcionamiento del CRUD en  paginas web ",
-            "icon":"img/icons/JavaW.png"
-        },
-        {
-            "name":"HTML-CSS",
-            "title":"Front-end develop",
-            "description":"Diseño de vistas y maquetación de paginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
-            "icon":"img/icons/Html-Css.png"
-        },
-        {
-            "name":"JavaScript",
-            "title":"Front-end develop",
-            "description":"Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
-            "icon":"img/icons/JS.png"
-        },
-        {
-            "name":"React Js",
-            "title":"Front-end develop",
-            "description":"Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
-            "icon":"img/icons/React.png"
-        }
-    ]
+  "skill": [
+    {
+      "name": "Java",
+      "title": "Back-end develop",
+      "description": "Desarrollo de microservicios con spring boot implementando  patron de diseño MVC para el funcionamiento del CRUD en  paginas web ",
+      "icon": "img/icons/JavaW.png"
+    },
+    {
+      "name": "HTML-CSS",
+      "title": "Front-end develop",
+      "description": "Diseño de vistas y maquetación de paginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
+      "icon": "img/icons/Html-Css.png"
+    },
+    {
+      "name": "JavaScript",
+      "title": "Front-end develop",
+      "description": "Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
+      "icon": "img/icons/JS.png"
+    },
+    {
+      "name": "React Js",
+      "title": "Front-end develop",
+      "description": "Creación de proyectos web mediante la implementación de componentes y uso de hooks para el manejo de estados y demas características",
+      "icon": "img/icons/React.png"
+    }
+  ]
 }

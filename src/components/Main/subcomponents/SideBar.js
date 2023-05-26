@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../Css/sideBar.css";
 
 const SideBar = () => {
   const { scrollYProgress } = useScroll();
+  const linkRef = useRef(null);
+
+  //funcion para descargar cv
+  function descargar() {
+    linkRef.current.click();
+  }
   //foto perfil
   const PhotoP = (prop) => {
     const { speed } = prop;
@@ -46,7 +52,15 @@ const SideBar = () => {
           un buen trabajo en equipo. Ya sea colabarando o aportando ideas que
           busquen solucionar los problemas del equipo.
         </motion.p>
-        <button id="btn-download">Descargar CV</button>
+        <button id="btn-download" onClick={descargar}>
+          Descargar CV
+        </button>
+        <a
+          href="../prueba.pdf"
+          download="GonzaloVazquez"
+          hidden
+          ref={linkRef}
+        ></a>
       </div>
     </aside>
   );

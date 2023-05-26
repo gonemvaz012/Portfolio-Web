@@ -9,16 +9,19 @@ const Navbar = () => {
 
   const toElement = () => setClick(false);
 
-  const reload = ()=>{
-    window.location.reload()
-   
-  } 
+  const reload = () => {
+    window.location.reload();
+  };
 
   return (
     <nav className="nav-menu">
-        
-      <img className="nav-menu__logo" src="/img/condorLogoW.png" alt="" onClick={reload}/>
-        
+      <img
+        className="nav-menu__logo"
+        src="/img/condorLogoW2.png"
+        alt=""
+        onClick={reload}
+      />
+
       <div className="nav-menu__items">
         <div className="nav-menu__items__div" id="div1"></div>
         <Link

@@ -1,9 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
+import { useAnimation,motion } from "framer-motion";
 import "../Css/formContact.css";
 
 const FormContact = () => {
+ 
+  //declaracion animations
+  const send = useAnimation()
+  const fail = useAnimation()
   //declaracion hook de objetos datos form
-  const formRef = useRef();
+
   const [datos, setDatos] = useState({
     nombre: "",
     email: "",
@@ -31,21 +36,50 @@ const FormContact = () => {
     }
     return false;
   }
-  //función asincrona para enviar alert despues de haber recargado la pagina
-  async function enviarAlertExito() {
-    console.log("esperando alert");
-    await new Promise((resolve) => window.addEventListener("load", resolve));
-    alert("Su correo se envió con exito");
+
+  // función para enviar peticion 
+  function enviarPeticion(){
+ 
+    fetch("https://formsubmit.co/ajax/gonemvaz012@gmail.com",{
+      method:'POST',
+       headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       },
+      body: JSON.stringify({
+        nombre: datos.nombre,
+        email: datos.email,
+        asunto: datos.asunto,
+        mensaje: datos.mensaje
+      }),
+    })
+    
   }
+
 
   //funcion para enviar el formulario una vez validado
   function enviarFormulario(e) {
     e.preventDefault();
     if (validarFormulario()) {
-      enviarAlertExito();
-      formRef.current.submit(); //se recarga la pagina despues de haber enviado el correo
+      enviarPeticion();
+      send.start({
+        opacity:[0,1,1,0],
+        x:0,
+        transition:{
+          x:{duration:1},
+          duration:4
+        }
+      })
+      
     } else {
-      alert("Por favor ingrese bien los valores");
+      fail.start({
+        opacity:[0,1,1,0],
+        x:0,
+        transition:{
+          x:{duration:1},
+          duration:4
+        }
+      })
     }
   }
   //funcion onChange que carga los datos cada vez que hay cambios en los valores ingresados en los inputs
@@ -59,14 +93,19 @@ const FormContact = () => {
   return (
     <div className="formContact-ctnr">
       <form
-        action="https://formsubmit.co/gonemvaz012@gmail.com"
-        method="POST"
         onSubmit={enviarFormulario}
         className="formContact-ctnr__form"
-        ref={formRef}
       >
         <div className="formContact-ctnr__form__border">
           <h2 className="formContact-ctnr__form__title">Envíame un mensaje</h2>
+          <motion.div className="alert_exito" initial={{opacity:0, x:-20}} animate={send}>
+            <p><span><i class="fa-regular fa-circle-check"></i></span>
+              Su mensaje se envió con exito</p>
+          </motion.div>
+          <motion.div className="alert_error" initial={{opacity:0,x:-20}} animate={fail}>
+            <p><span><i class="fa-regular fa-circle-check"></i></span>
+            Por favor ingrese correctamente los datos</p>
+          </motion.div>
           <div className="formContact-ctnr__form__input">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" onChange={onChangeInput}></input>

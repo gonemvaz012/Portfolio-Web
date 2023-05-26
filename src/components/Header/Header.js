@@ -87,7 +87,7 @@ const Header = () => {
                 opacity: { delay: 5, duration: 1, ease: easeOut },
               }}
             >
-              GONZALO EMANUEL VAZQUEZ
+              GONZALO VAZQUEZ
             </motion.h1>
           </motion.div>
 
