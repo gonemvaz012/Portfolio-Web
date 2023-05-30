@@ -53,7 +53,7 @@ const Header = () => {
           alt="cielo"
         />
         <LayerBG
-          src="/img/bg/capa33.png"
+          src="/img/bg/capa3.png"
           speed={-3}
           layer="layer3 montains"
           alt="montañas"
@@ -68,7 +68,7 @@ const Header = () => {
             animate={{
               opacity: [1, 0, 1, 0, 1, 0, 1, 0, 1],
               width: "100%",
-              height: 122,
+              height: 80,
               backgroundColor: "#1c1c1c90",
             }}
             transition={{
@@ -153,8 +153,8 @@ const Header = () => {
 
         <motion.div
           className="headerbg__logos"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 8 }}
         >
           <div className="headerbg__logos__ctnr">

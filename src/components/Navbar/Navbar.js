@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 import "./Css/navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  let { leng, idioma } = props;
   const [click, setClick] = useState(false);
-
   const toElement = () => setClick(false);
 
   const reload = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
           duration={2000}
           onClick={toElement}
         >
-          INICIO
+          {idioma.navbar[leng].home}
         </Link>
         <Link
           className="nav-link"
@@ -46,7 +46,7 @@ const Navbar = () => {
           duration={2000}
           onClick={toElement}
         >
-          SOBRE MI
+          {idioma.navbar[leng].item1}
         </Link>
         <Link
           className="nav-link"
@@ -58,7 +58,7 @@ const Navbar = () => {
           duration={2000}
           onClick={toElement}
         >
-          PORFOLIO
+          {idioma.navbar[leng].item2}
         </Link>
         <Link
           className="nav-link"
@@ -70,9 +70,10 @@ const Navbar = () => {
           duration={2000}
           onClick={toElement}
         >
-          CONTACTO
+          {idioma.navbar[leng].item3}
         </Link>
       </div>
+
       <div className="nav-menu__bars">
         <i className="fa-solid fa-bars"></i>
       </div>

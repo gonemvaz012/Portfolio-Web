@@ -4,7 +4,8 @@ import Card from "../Items/Card";
 
 import Data from "../Items/dataSkills.json";
 
-const Carrousel = () => {
+const Carrousel = (props) => {
+  const { leng, idioma } = props;
   const { skill } = Data;
 
   const [value, setValue] = useState(false);
@@ -64,10 +65,10 @@ const Carrousel = () => {
       </div>
       <div className="skills__carrousel__screen">
         <motion.div className="skills__carrousel__view" animate={animation}>
-          <Card data={skill[0]} />
-          <Card data={skill[1]} />
-          <Card data={skill[2]} />
-          <Card data={skill[3]} />
+          <Card data={skill[leng].data[0]} />
+          <Card data={skill[leng].data[1]} />
+          <Card data={skill[leng].data[2]} />
+          <Card data={skill[leng].data[3]} />
         </motion.div>
       </div>
       <div className="skills__slideR">

@@ -3,9 +3,11 @@ import Carrousel from "./Carrousel";
 import { motion, useAnimation } from "framer-motion";
 
 const Skill = (props) => {
-  const { inView, animation } = props;
+  const { inView, animation, leng, idioma } = props;
   const { x, y } = animation;
   const skill = useAnimation();
+
+  //console.log(idioma.skills[leng].title);
   //funcion que ejecuta la animacion
   const runInView = (state, x, y) => {
     if (state) {
@@ -44,10 +46,10 @@ const Skill = (props) => {
       animate={skill}
     >
       <div className="skills__title-ctr">
-        <h2 className="skills__title-ctr__h2">SKILLS</h2>
+        <h2 className="skills__title-ctr__h2">{idioma.skills[leng].title}</h2>
       </div>
       <div className="skills__border">
-        <Carrousel />
+        <Carrousel leng={leng} idioma={idioma} />
       </div>
     </motion.div>
   );

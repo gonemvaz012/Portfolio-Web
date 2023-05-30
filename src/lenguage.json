@@ -1,0 +1,112 @@
+{
+    "btn":[
+        {
+            "lbl":"ES"
+        },
+        {
+            "lbl":"ENG"
+        }
+    ],
+    "navbar":[
+        {
+            "home":"INICIO",
+            "item1":"SOBRE MI",
+            "item2":"PROYECTOS",
+            "item3":"CONTACTO",
+            "item4":"ES"
+        },
+        {
+            "home":"HOME",
+            "item1":"ABOUT ME",
+            "item2":"PROJECTS",
+            "item3":"CONTACT",
+            "item4":"ENG"
+        }
+    ],
+    "sidebar":[
+        {
+            "title":"SOBRE MI",
+            "description":"Soy una persona con un gran interes por aprender las nuevas tecnologías y herramientas que se presentan a diario en el entorno de la programacion IT, asi como también, el interes de desarrollar de manera constante las habilidades blandas necesarías para llevar a cabo un buen trabajo en equipo. Ya sea colabarando o aportando ideas que busquen solucionar los problemas del equipo.",
+            "btnCv":"Descargar CV"
+        },
+        {
+            "title":"ABOUT ME",
+            "description":"I am a person with a great interest in learning the new technologies and tools that are presented daily in the IT programming environment, as well as the interest in constantly developing the soft skills necessary to carry out a good job in equipment. Either collaborating or contributing ideas that seek to solve the team's problems.",
+            "btnCv":"Download CV"
+        }
+    ],
+    "skills":[
+        {
+            "title":"HABILIDADES"
+        },
+        {
+            "title":"SKILLS"
+        }
+        
+    ],
+    "aptitude":[
+        {
+            "item1":"Ingles A2",
+            "item2":"Trabajo en equipo",
+            "item3":"Metodologias agiles"
+        },
+        {
+            "item1":"English A2",
+            "item2":"Teamwork",
+            "item3":"Agile methodologies"
+        }
+    ],
+    "tools":[
+        {
+            "title":"HERRAMIENTAS"
+        },
+        {
+            "title":"TOOLS"
+        }
+    ],
+    "proyect":[
+        {
+            "title":"PROYECTOS",
+            "description":"Proyecto del bootcamp Semillero Latam donde desarrollé Front - end con HTML, CSS y JavaScript.",
+            "description2":"Mi legado es un espacio donde se pueden conmemorar a seres queridos que ya no están.",
+            "btnGo":"ir a Mi Legado"
+        },
+        {
+            "title":"PROJECTS",
+            "description":"Semillero Latam bootcamp project where I develop Front - end with HTML, CSS and JavaScript.",
+            "description2":"Mi Legado is a space where loved ones who are no longer here can be commemorated.",
+            "btnGo":"go to Mi Legado"
+        }
+    ],
+    "contact":[
+        {
+            "title":"CONTACTO",
+            "title2":"Disponible",
+            "title3":"Enviame un mensaje",
+            "text":"Estoy disponible full-time, conectate conmigo atravez de los siguientes medios",
+            "lbl1":"Nombre",
+            "lbl2":"Correo Electronico",
+            "lbl3":"Asunto",
+            "lbl4":"Mensaje",
+            "submit":"Enviar",
+            "alert1":"Su mensaje se envió con exito",
+            "alert2":"Por favor ingrese correctamente los datos"
+
+        },
+        {
+            "title":"CONTACT",
+            "title2":"Available",
+            "title3":"Send me a message",
+            "text":"I am available full-time, connect with me through the following means",
+            "lbl1":"Name",
+            "lbl2":"Email",
+            "lbl3":"Subject",
+            "lbl4":"Message",
+            "submit":"Send",
+            "alert1":"Your message was sent successfully",
+            "alert2":"Please enter the data correctly"
+
+        }
+    ]
+        
+}

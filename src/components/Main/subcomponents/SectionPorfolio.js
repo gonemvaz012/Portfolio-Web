@@ -5,7 +5,8 @@ import React, { useEffect } from "react";
 import "../Css/SectionPorfolio.css";
 import CarrouselP from "../Items/CarrouselP";
 
-const SectionPorfolio = () => {
+const SectionPorfolio = (props) => {
+  const { leng, idioma } = props;
   const { scrollYProgress } = useScroll();
   //titulo Porfolio
   const TituloPf = (prop) => {
@@ -23,7 +24,7 @@ const SectionPorfolio = () => {
         transition={{ delay: 0.3, duration: 1 }}
         style={{ x: xvalue }}
       >
-        PORTFOLIO
+        {idioma.proyect[leng].title}
       </motion.h1>
     );
   };
@@ -112,7 +113,7 @@ const SectionPorfolio = () => {
           initial={{ opacity: 0, x: `-10%` }}
           animate={fadeInPf}
         >
-          <CarrouselP />
+          <CarrouselP leng={leng} idioma={idioma} />
         </motion.div>
         <motion.div
           className="sectionPf-video"

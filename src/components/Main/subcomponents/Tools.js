@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const Tools = (props) => {
-  const { inView, animation } = props;
+  const { inView, animation, leng, idioma } = props;
   const { x, y } = animation;
   const tools = useAnimation();
   //funcion que ejecuta las animaciones segun el inView
@@ -43,7 +43,7 @@ const Tools = (props) => {
       whileInView={{ opacity: 1 }}
     >
       <div className="tools__title-ctr">
-        <h2 className="tools__title-ctr__h2">TOOLS</h2>
+        <h2 className="tools__title-ctr__h2">{idioma.tools[leng].title}</h2>
       </div>
       <div className="tools__border">
         <div className="tools__items-ctr">

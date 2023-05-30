@@ -9,18 +9,19 @@ import { useInView } from "react-intersection-observer";
 import "./Css/Main.css";
 import { useAnimation } from "framer-motion";
 
-const Main = () => {
+const Main = (props) => {
+  const { leng, idioma } = props;
   const [ref, inView] = useInView();
   const photoAnima = useAnimation();
 
   return (
     <main className="main" ref={ref}>
       <section className="section-aboutMe">
-        <SideBar />
-        <SectionSkills inView={inView} />
+        <SideBar leng={leng} idioma={idioma} />
+        <SectionSkills inView={inView} leng={leng} idioma={idioma} />
       </section>
-      <SectionPorfolio />
-      <SectionContact />
+      <SectionPorfolio leng={leng} idioma={idioma} />
+      <SectionContact leng={leng} idioma={idioma} />
     </main>
   );
 };

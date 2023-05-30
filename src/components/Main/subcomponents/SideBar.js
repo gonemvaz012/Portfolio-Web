@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../Css/sideBar.css";
 
-const SideBar = () => {
+const SideBar = (props) => {
+  const { leng, idioma } = props;
   const { scrollYProgress } = useScroll();
   const linkRef = useRef(null);
 
@@ -37,7 +38,7 @@ const SideBar = () => {
           whileInView={{ opacity: 1, x: `0%` }}
           transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
         >
-          SOBRE MI
+          {idioma.sidebar[leng].title}
         </motion.h1>
         <motion.p
           className="text-container__p"
@@ -45,15 +46,10 @@ const SideBar = () => {
           whileInView={{ opacity: 1, x: `0%` }}
           transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }}
         >
-          Soy una persona con un gran interes por aprender las nuevas
-          tecnologías y herramientas que se presentan a diario en el entorno de
-          la programacion IT, asi como también, el interes de desarrollar de
-          manera constante las habilidades blandas necesarías para llevar a cabo
-          un buen trabajo en equipo. Ya sea colabarando o aportando ideas que
-          busquen solucionar los problemas del equipo.
+          {idioma.sidebar[leng].description}
         </motion.p>
         <button id="btn-download" onClick={descargar}>
-          Descargar CV
+          {idioma.sidebar[leng].btnCv}
         </button>
         <a
           href="../prueba.pdf"

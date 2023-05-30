@@ -32,3 +32,25 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+  .btn-lg{
+    position: fixed;
+    top: 35px;
+    right: 15%;
+    font-family: "HelveticaNeueCyr";
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 39px;
+    padding: 5px;
+    background-color: var(--border-color);
+    color:var(--back-color);
+    cursor:pointer;
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+    z-index: 101;
+  }
+  .btn-lg:hover{
+    border-radius: 0px;
+    padding: 6px;
+    background-color: var(--secundary-color);
+  }

@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import "./index.css";
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { motion } from "framer-motion";
+import Idioma from "./lenguage.json";
 const Header = React.lazy(() => import("./components/Header/Header"));
 const Main = React.lazy(() => import("./components/Main"));
 const Footer = React.lazy(() => import("./components/Footer/Footer"));
@@ -20,14 +21,25 @@ const Loading = () => {
 };
 
 function App() {
+  let [lenguage, setLenguage] = useState(0);
+  function translate() {
+    if (lenguage === 0) {
+      setLenguage(1);
+    } else {
+      setLenguage(0);
+    }
+  }
   return (
     <div>
-      <Navbar />
+      <Navbar leng={lenguage} idioma={Idioma} />
       <Suspense delayMs={1} fallback={<Loading />}>
         <Header />
-        <Main />
+        <Main leng={lenguage} idioma={Idioma} />
         <Footer />
       </Suspense>
+      <motion.div className="btn-lg" onClick={translate}>
+        {Idioma.btn[lenguage].lbl} <i class="fa-solid fa-language"></i>
+      </motion.div>
     </div>
   );
 }

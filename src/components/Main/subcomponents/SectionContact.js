@@ -3,7 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import FormContact from "../Items/FormContact";
 import "../Css/SectionContact.css";
 
-const SectionContact = () => {
+const SectionContact = (props) => {
+  const { leng, idioma } = props;
   const { scrollYProgress } = useScroll();
   const [isCopy, setIsCopy] = useState(false); //estado para habilitar cartel copy
   //titulo Porfolio
@@ -50,7 +51,7 @@ const SectionContact = () => {
 
   return (
     <section className="sectionContact" id="contact">
-      <h1 className="contactTitle">CONTACTO</h1>
+      <h1 className="contactTitle">{idioma.contact[leng].title}</h1>
       <div className="contactInfo">
         <div className="contactInfo__borderHero">
           <div className="contactInfo__hero">
@@ -58,11 +59,8 @@ const SectionContact = () => {
           </div>
         </div>
         <div className="contactInfo__data">
-          <h5> Disponible</h5>
-          <p>
-            Estoy disponible full-time, conectate conmigo atravez de los
-            siguientes medios
-          </p>
+          <h5> {idioma.contact[leng].title2}</h5>
+          <p>{idioma.contact[leng].text}</p>
           <br />
           <p>
             <span>
@@ -130,7 +128,7 @@ const SectionContact = () => {
           </motion.div>
         </div>
       </div>
-      <FormContact />
+      <FormContact leng={leng} idioma={idioma} />
     </section>
   );
 };

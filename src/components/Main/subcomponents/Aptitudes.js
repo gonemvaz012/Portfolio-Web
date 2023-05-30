@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import BarProgress from "../Items/BarProgress";
 
 const Aptitudes = (props) => {
-  const { inView, animation } = props;
+  const { inView, animation, leng, idioma } = props;
   const { x, y } = animation;
   const aptitudes = useAnimation();
   //funcion que ejecuta las animaciones segun el inView
@@ -49,15 +49,15 @@ const Aptitudes = (props) => {
       <div className="aptitudes__border">
         <div className="aptitudes__items">
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">Ingles A2</p>
+            <p className="aptitudes__items__p">{idioma.aptitude[leng].item1}</p>
           </div>
           <BarProgress porcent={40} />
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">Trabajo en equipo</p>
+            <p className="aptitudes__items__p">{idioma.aptitude[leng].item2}</p>
           </div>
           <BarProgress porcent={90} />
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">Metodologías agiles</p>
+            <p className="aptitudes__items__p">{idioma.aptitude[leng].item3}</p>
           </div>
           <BarProgress porcent={80} />
         </div>

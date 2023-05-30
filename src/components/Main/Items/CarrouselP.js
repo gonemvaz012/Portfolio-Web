@@ -5,8 +5,9 @@ import "../Css/carrouselPf.css";
 
 import "../Css/SectionPorfolio.css";
 
-const CarrouselP = () => {
+const CarrouselP = (props) => {
   //props and hooks
+  const { leng, idioma } = props;
   const [value, setValue] = useState(false);
   const animation = useAnimation();
 
@@ -76,14 +77,14 @@ const CarrouselP = () => {
               <h5 className="sectionPf__works__ctnr__h5">Semillero Latam</h5>
               <h2 className="sectionPf__works__ctnr__h2">Mi Legado</h2>
               <p className="sectionPf__works__ctnr__p">
-                Proyecto del bootcamp Semillero Latam donde desarrollé Front -
-                end con HTML, CSS y JavaScript
+                {idioma.proyect[leng].description}
                 <br></br>
                 <br></br>
-                Mi legado es un espacio donde se pueden conmemorar a seres
-                queridos que ya no están.
+                {idioma.proyect[leng].description2}
               </p>
-              <button className="btn-enter">ir a Mi Legado</button>
+              <button className="btn-enter">
+                {idioma.proyect[leng].btnGo}
+              </button>
             </div>
           </div>
           {/*IMAGEN CERTIFICADO*/}
