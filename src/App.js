@@ -34,7 +34,7 @@ function App() {
       <Navbar leng={lenguage} idioma={Idioma} />
       <Suspense delayMs={1} fallback={<Loading />}>
         <Header />
-        <Main leng={lenguage} idioma={Idioma} />
+        {/*<Main leng={lenguage} idioma={Idioma} />*/}
         <Footer />
       </Suspense>
       <motion.div className="btn-lg" onClick={translate}>
