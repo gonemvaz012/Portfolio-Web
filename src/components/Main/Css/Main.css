@@ -29,7 +29,8 @@
     .section-aboutMe {
         margin: 0px 25px;
         grid-template:
-            "SideBar SectionSkills" auto /
+            "SideBar SideBar" minmax(350px,550px)
+            "SectionSkills SectionSkills" /
             auto minmax(350px,550px);
         gap: 10px;
        

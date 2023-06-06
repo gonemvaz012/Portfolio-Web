@@ -20,8 +20,8 @@ const Main = (props) => {
         <SideBar leng={leng} idioma={idioma} />
         <SectionSkills inView={inView} leng={leng} idioma={idioma} />
       </section>
-      <SectionPorfolio leng={leng} idioma={idioma} />
-      <SectionContact leng={leng} idioma={idioma} />
+      {/*<SectionPorfolio leng={leng} idioma={idioma} />
+      <SectionContact leng={leng} idioma={idioma} />*/}
     </main>
   );
 };
