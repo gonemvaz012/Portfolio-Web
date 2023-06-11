@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import "../../../index.css";
 import "../Css/sideBar.css";
 
 const SideBar = (props) => {

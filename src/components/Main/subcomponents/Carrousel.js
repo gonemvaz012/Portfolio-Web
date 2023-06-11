@@ -1,5 +1,5 @@
 import { useAnimation, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Items/Card";
 
 import Data from "../Items/dataSkills.json";
@@ -7,6 +7,10 @@ import Data from "../Items/dataSkills.json";
 const Carrousel = (props) => {
   const { leng, idioma } = props;
   const { skill } = Data;
+  let loaded = true;
+
+  //hook
+  let [pos, setPos] = useState(0);
 
   const [value, setValue] = useState(false);
   const animation = useAnimation();
@@ -14,8 +18,40 @@ const Carrousel = (props) => {
   const opacityR = useAnimation();
   const opacityL = useAnimation();
 
-  const slide = () => {
+  useEffect(() => {
+    if (pos != 0) {
+      animation.start({
+        x: `${50 * pos}%`,
+        transition: {
+          duration: 1.3,
+          type: "spring",
+        },
+      });
+      if ((pos = -1)) {
+        opacityR.start({
+          opacity: 0,
+          display: "none",
+        });
+        opacityL.start({
+          opacity: 1,
+          display: "flex",
+        });
+      } else if ((pos = 0)) {
+        opacityR.start({
+          opacity: 1,
+          display: "flex",
+        });
+        opacityL.start({
+          opacity: 0,
+          display: "none",
+        });
+      }
+    }
+  });
+
+  /*const slide = () => {
     setValue(!value);
+    
     if (!value) {
       animation.start({
         x: `-50%`,
@@ -49,7 +85,7 @@ const Carrousel = (props) => {
         display: "none",
       });
     }
-  };
+  };*/
 
   return (
     <div className="skills__carrousel">
@@ -57,7 +93,7 @@ const Carrousel = (props) => {
         <motion.span
           className="skills__arrowL"
           initial={{ opacity: 0, display: "none" }}
-          onClick={() => slide()}
+          onClick={() => setPos(pos + 1)}
           animate={opacityL}
         >
           <i className="fa-solid fa-circle-arrow-left"></i>
@@ -74,7 +110,7 @@ const Carrousel = (props) => {
       <div className="skills__slideR">
         <motion.span
           className="skills__arrowR"
-          onClick={() => slide()}
+          onClick={() => setPos(pos - 1)}
           animate={opacityR}
         >
           <i className="fa-solid fa-circle-arrow-right"></i>

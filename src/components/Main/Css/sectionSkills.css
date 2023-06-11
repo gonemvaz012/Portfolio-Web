@@ -12,11 +12,11 @@
   display: grid;
   gap: 20px;
   grid-template:
-    "skills skills" 382px
-    "tools  aptitudes" 471px /
-    auto 359px;
+    "skills skills" 344px
+    "tools  aptitudes" 424px /
+    1fr 1fr;
   min-width: 250px;
-  height: 876px;
+  height: 788px;
 }
 
 .skills {
@@ -26,7 +26,7 @@
 }
 .aptitudes {
   grid-area: aptitudes;
-  max-height: 380px;
+  max-height: 342px;
   background-color: var(--bg-secundary);
   padding: 12px 8px 8px 8px;
 }
@@ -34,12 +34,12 @@
 .skills__border,
 .aptitudes__border {
   width: 100%;
-  height: auto;
+  height: 85%;
   border: 1px solid var(--secundary-color);
 }
 .skills__carrousel {
-  width: 100%;
-  margin: 5px 10px;
+  width: auto;
+  margin: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -57,12 +57,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 88px;
-  max-height: 272px;
+  width: 79px;
+  max-height: 245px;
 }
 
-.skills__arrowR,
-.skills__arrowL {
+.skills__arrowR > i,
+.skills__arrowL > i {
   font-size: 2rem;
   color: #3d3d3d;
 }
@@ -94,8 +94,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 5px;
-  padding: 25px;
+  padding: 15px 18px;
 }
 
 .aptitudes__items__ctn {
@@ -160,24 +159,25 @@
 }
 
 .tools__border {
+  display: flex;
   width: 100%;
-  height: auto;
+  height: 88%;
   padding: 10px;
   border: 1px solid var(--secundary-color);
 }
 
 .tools__items-ctr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   width: 100%;
-  padding: 25px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 .tools__items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 152px;
+  justify-content: center;
+  /*max-width: 152px;*/
   margin-bottom: 15px;
   padding: 5px;
 }
@@ -189,4 +189,51 @@
 .tools__items__p {
   color: var(--secundary-color);
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .skills__title-ctr,
+  .tools__title-ctr,
+  .aptitudes__title-ctr {
+    height: 35px;
+  }
+  .skills__title-ctr__h2,
+  .tools__title-ctr__h2,
+  .aptitudes__title-ctr__h2 {
+    font-size: 1.05rem;
+  }
+  .aptitudes__items__p,
+  .aptitudes__items__porcent,
+  .tools__items__p {
+    font-size: 0.9rem;
+  }
+  .tools__items {
+    margin-bottom: 5px;
+    padding: 0px;
+  }
+  .tools__items__photo {
+    height: 28px;
+    margin-bottom: 5px;
+  }
+  .tools__items-ctr {
+    gap: 5px;
+  }
+  .sectionSkills {
+    gap: 10px;
+    grid-template:
+      "skills skills" 344px
+      "tools  aptitudes" 330px/
+      1fr 1fr;
+  }
+  .tools__border {
+    height: 85%;
+  }
+
+  .aptitudes {
+    max-height: 298px;
+    padding: 5px 8px 8px 8px;
+  }
+  .aptitudes__items {
+    padding: 12px 10px;
+  }
 }

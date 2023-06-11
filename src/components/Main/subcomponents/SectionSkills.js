@@ -1,6 +1,6 @@
 import React from "react";
 import Tools from "./Tools";
-
+import "../../../index.css";
 import "../Css/sectionSkills.css";
 import Skill from "./Skill";
 import Aptitudes from "./Aptitudes";

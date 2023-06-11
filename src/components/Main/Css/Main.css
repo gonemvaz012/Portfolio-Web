@@ -1,42 +1,39 @@
-
 .main {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .section-aboutMe {
-    margin: 260px 10px;
-    display: grid;
-    gap: 20px;
-    grid-template:
-        "SideBar SectionSkills" 1012px /
-        auto minmax(578px, 784px);
-    place-content: center;
+  margin: 260px 10px;
+  display: grid;
+  gap: 20px;
+  grid-template:
+    "SideBar SectionSkills" 911px /
+    auto minmax(520px, 706px);
+  place-content: center;
 }
 
 .others {
-    grid-area: others;
-    max-height: 415px;
-    background-color: var(--bg-secundary);
-    padding: 40px;
+  grid-area: others;
+  max-height: 415px;
+  background-color: var(--bg-secundary);
+  padding: 40px;
 }
 
-@media (max-width:990px) {
-  
-    .section-aboutMe {
-        margin: 0px 25px;
-        grid-template:
-            "SideBar SideBar" minmax(350px,550px)
-            "SectionSkills SectionSkills" /
-            auto minmax(350px,550px);
-        gap: 10px;
-       
-    }
+@media (max-width: 990px) {
+  .section-aboutMe {
+    margin: 0px 25px;
+    grid-template:
+      "SideBar SideBar"
+      "SectionSkills SectionSkills" /
+      1fr 1fr;
+    gap: 10px;
+  }
 
-    .aside {
+  /*.aside {
         grid-area: SideBar;
         width: 100%;
         max-width: 350px;
@@ -76,12 +73,10 @@
               auto;
         min-width: 250px;
         height: auto;
-    }
-
-
+    }*/
 }
 
-@media (max-width:580px) {
+/*@media (max-width:580px) {
     html {
         font-size: 12px;
     }
@@ -115,4 +110,4 @@
         height: 26px;
         margin-right: 10px;
     }
-}
+}*/

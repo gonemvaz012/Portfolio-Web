@@ -1,59 +1,73 @@
-:root{
-    --font-Jost:'Jost', sans-serif;
-    --font-Fira-sans:'Fira Sans', sans-serif;
-    --border-color: #707070;
-    --back-color: #1C1C1C;
-    --bg-dark-color: #1D1D1D;
-    --bg-secundary: #262626;
-    --secundary-color: #13B7FF;
-    
+:root {
+  --font-Jost: "Jost", sans-serif;
+  --font-Fira-sans: "Fira Sans", sans-serif;
+  --border-color: #707070;
+  --back-color: #1c1c1c;
+  --bg-dark-color: #1d1d1d;
+  --bg-secundary: #262626;
+  --secundary-color: #13b7ff;
 }
-.card__ctr{
-    width: 50%;
-    max-width: 274px;
-    height: 272px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 30px;
-    margin: 10px;
-    background-color: #2A2C2D;
-    border-radius: 10px;
-    box-shadow: 3px 3px 15px rgb(28, 28, 28);
-    border: 1px solid #646464;
-
+.card__ctr {
+  width: 50%;
+  max-width: 247px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #2a2c2d;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgb(28, 28, 28);
+  border: 1px solid #646464;
 }
 
-.card__icon{
-    height: 58px;
-    margin-bottom: 20px;
+.card__icon {
+  height: 52px;
+  margin-bottom: 20px;
 }
-.card__icon__img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card__icon__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.card__title{
-    font-family: var(--font-Fira-sans);
-    font-weight: 200;
-    font-size: 1.1rem;
-    color: var(--secundary-color);
-    text-align: start;
-    margin-bottom: 0px;
+.card__title {
+  font-family: var(--font-Fira-sans);
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--secundary-color);
+  text-align: start;
+  margin-bottom: 0px;
 }
-.card__name{
-    font-family: var(--font-Fira-sans);
-    font-weight: 500;
-    font-size: 1.7rem;
-    color: var(--secundary-color);
-    text-align: start;
-    margin-bottom: 5px;
+.card__name {
+  font-family: var(--font-Fira-sans);
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--secundary-color);
+  text-align: start;
+  margin-bottom: 5px;
 }
-.card__description{
-    width: 100%;
-    font-family: var(--font-Fira-sans);
-    font-weight: 200;
-    font-size: 0.9rem;
-    color: white;
-    text-align: justify;
+.card__description {
+  width: 100%;
+  font-family: var(--font-Fira-sans);
+  font-weight: 200;
+  font-size: 0.85rem;
+  color: white;
+  text-align: justify;
+}
+
+@media (max-width: 640px) {
+  .card__icon {
+    height: 42px;
+    margin-bottom: 8px;
+  }
+  .card__title {
+    font-size: 0.8rem;
+  }
+  .card__name {
+    font-size: 1.2rem;
+  }
+  .card__description {
+    font-size: 0.83rem;
+  }
 }
