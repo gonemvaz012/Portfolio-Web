@@ -5,87 +5,70 @@ import Card from "../Items/Card";
 import Data from "../Items/dataSkills.json";
 
 const Carrousel = (props) => {
-  const { leng, idioma } = props;
+  const { leng } = props;
   const { skill } = Data;
-  let loaded = true;
 
-  //hook
-  let [pos, setPos] = useState(0);
-
-  const [value, setValue] = useState(false);
+  //hooks
+  const [pos, setPos] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [length, setLength] = useState(2);
+  const [porcent, setPorcent] = useState(50);
+  //animaciones de botones y carrousel
   const animation = useAnimation();
-
   const opacityR = useAnimation();
   const opacityL = useAnimation();
 
   useEffect(() => {
-    if (pos != 0) {
-      animation.start({
-        x: `${50 * pos}%`,
-        transition: {
-          duration: 1.3,
-          type: "spring",
-        },
-      });
-      if ((pos = -1)) {
-        opacityR.start({
-          opacity: 0,
-          display: "none",
-        });
-        opacityL.start({
-          opacity: 1,
-          display: "flex",
-        });
-      } else if ((pos = 0)) {
-        opacityR.start({
-          opacity: 1,
-          display: "flex",
-        });
-        opacityL.start({
-          opacity: 0,
-          display: "none",
-        });
-      }
+    //condición para cambiar tamaño de carrusel
+    if (windowWidth <= 615) {
+      setLength(4);
+      setPorcent(25);
+    } else {
+      setLength(2);
+      setPorcent(50);
     }
-  });
+    animation.start({
+      x: `${porcent * pos}%`,
+      transition: {
+        duration: 1.3,
+        type: "spring",
+      },
+    });
 
-  /*const slide = () => {
-    setValue(!value);
-    
-    if (!value) {
-      animation.start({
-        x: `-50%`,
-        transition: {
-          duration: 1.3,
-          type: "spring",
-        },
-      });
+    if (pos === -(length - 1)) {
       opacityR.start({
         opacity: 0,
         display: "none",
       });
+    } else if (pos < 0) {
       opacityL.start({
+        opacity: 1,
+        display: "flex",
+      });
+      opacityR.start({
         opacity: 1,
         display: "flex",
       });
     } else {
-      animation.start({
-        x: `0%`,
-        transition: {
-          duration: 2,
-          type: "spring",
-        },
-      });
-      opacityR.start({
-        opacity: 1,
-        display: "flex",
-      });
       opacityL.start({
         opacity: 0,
         display: "none",
       });
     }
-  };*/
+
+    //funcion para actualizar el ancho de la pantalla cuando cambia
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    // Agregar el listener para manejar el cambio de tamaño de la ventana
+    window.addEventListener("resize", handleResize);
+
+    // Limpiar el listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [pos, animation, opacityL, opacityR, windowWidth, length, porcent]);
 
   return (
     <div className="skills__carrousel">

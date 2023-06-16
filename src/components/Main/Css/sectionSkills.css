@@ -200,7 +200,7 @@
   .skills__title-ctr__h2,
   .tools__title-ctr__h2,
   .aptitudes__title-ctr__h2 {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
   .aptitudes__items__p,
   .aptitudes__items__porcent,
@@ -235,5 +235,32 @@
   }
   .aptitudes__items {
     padding: 12px 10px;
+  }
+}
+
+@media(max-width:615px){
+  
+  .skills__carrousel__view {
+    width: 400%;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width:435px){
+  .sectionSkills {
+    gap: 10px;
+    grid-template:
+      "skills skills" 344px
+      "tools  tools" 280px
+      "aptitudes aptitudes" 280px/
+      1fr 1fr;
+      height: 945px;
+  }
+  .skills {
+    padding: 12px 8px 8px;
+  }
+  .skills__arrowR > i,
+  .skills__arrowL > i {
+    font-size: 1.5rem;
   }
 }

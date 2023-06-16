@@ -58,16 +58,33 @@
 
 @media (max-width: 640px) {
   .card__icon {
-    height: 42px;
+    height: 52px;
     margin-bottom: 8px;
   }
   .card__title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .card__name {
     font-size: 1.2rem;
   }
   .card__description {
-    font-size: 0.83rem;
+    font-size: 1rem;
+  }
+}
+@media(max-width:615px){
+
+  .card__ctr {
+    width: 100%;
+    max-width: 285px;
+  }
+}
+
+@media (max-width: 321px) {
+  .card__ctr {
+    padding: 8px 10px;
+    height: 235px;
+  }
+  .card__description {
+    font-size: 0.85rem;
   }
 }

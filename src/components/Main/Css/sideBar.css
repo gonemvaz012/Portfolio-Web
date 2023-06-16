@@ -152,4 +152,39 @@
 }
 
 @media (max-width: 485px) {
+
+  .photo-Container {
+    max-width: 149px;
+    height: 186px;
+    left: unset;
+    right: 5%;
+  }
+  .text-container {
+    padding: 15px;
+    padding-top: 90px;
+    min-width: 250px;
+  }
+  
+  
+}
+
+@media (max-width: 321px) {
+
+  .photo-Container {
+    max-width: 134px;
+    height: 167px;
+  }
+  .text-container {
+    padding: 10px;
+    padding-top: 100px;
+  }
+  .text-container__h1 {
+    font-size: 1.3rem;
+  }
+  .text-container__p {
+    font-size: 0.9rem;
+  }
+  #btn-download {
+    font-size: 0.8rem;
+  }
 }

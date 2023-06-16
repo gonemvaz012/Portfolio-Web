@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../Css/SectionPorfolio.css";
 import CarrouselP from "../Items/CarrouselP";
@@ -8,6 +8,9 @@ import CarrouselP from "../Items/CarrouselP";
 const SectionPorfolio = (props) => {
   const { leng, idioma } = props;
   const { scrollYProgress } = useScroll();
+
+  //hooks
+  const [isOpen, setIsOpen] = useState(false);
   //titulo Porfolio
   const TituloPf = (prop) => {
     const { speed } = prop;
@@ -120,17 +123,26 @@ const SectionPorfolio = (props) => {
           initial={{ opacity: 0, x: `-10%` }}
           animate={fadeInPfV}
         >
-          <div className="sectionPf-video__screen">
-            <iframe
-              width="100%"
-              height="100%"
+          <motion.div
+            className="sectionPf-video__screen"
+            layout
+            data-isOpen={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <motion.iframe
+              layout
+              style={{
+                width: "100%",
+                height: "100%",
+                transform: isOpen ? "translateY(-429px)" : "translateY(429px)",
+              }}
               src="https://www.youtube.com/embed/Av9zPpF4UlA"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>
-          </div>
+            ></motion.iframe>
+          </motion.div>
         </motion.div>
       </div>
     </section>
