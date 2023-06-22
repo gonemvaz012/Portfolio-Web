@@ -1,5 +1,5 @@
 import { useAnimation } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../Css/carrouselPf.css";
 
@@ -8,55 +8,50 @@ import "../Css/SectionPorfolio.css";
 const CarrouselP = (props) => {
   //props and hooks
   const { leng, idioma } = props;
-  const [value, setValue] = useState(false);
-  const animation = useAnimation();
+  const [pos, setPos] = useState(0);
 
+  const animation = useAnimation();
   const opacityR = useAnimation();
   const opacityL = useAnimation();
 
-  const slide = () => {
-    setValue(!value);
-    if (!value) {
-      animation.start({
-        x: `-50%`,
-        transition: {
-          duration: 1.3,
-          type: "spring",
-        },
-      });
+  useEffect(() => {
+    //condición para cambiar tamaño de carrusel
+    animation.start({
+      x: `${33.33 * pos}%`,
+      transition: {
+        duration: 1.3,
+        type: "spring",
+      },
+    });
+
+    if (pos === -2) {
       opacityR.start({
         opacity: 0,
         display: "none",
       });
+    } else if (pos < 0) {
       opacityL.start({
         opacity: 1,
         display: "flex",
-      });
-    } else {
-      animation.start({
-        x: `0%`,
-        transition: {
-          duration: 2,
-          type: "spring",
-        },
       });
       opacityR.start({
         opacity: 1,
         display: "flex",
       });
+    } else {
       opacityL.start({
         opacity: 0,
         display: "none",
       });
     }
-  };
+  }, [pos]);
 
   return (
     <div className="carrouselPf">
       <motion.span
         className="carrouselPf__arrowL"
         initial={{ opacity: 0, display: "none" }}
-        onClick={() => slide()}
+        onClick={() => setPos(pos + 1)}
         animate={opacityL}
       >
         <i className="fa-solid fa-circle-arrow-left"></i>
@@ -91,12 +86,25 @@ const CarrouselP = (props) => {
           <div className="carrouselPf__img-ctr">
             <img src="../img/certificado.jpg" alt="" />
           </div>
+          <motion.div className="sectionPf-video">
+            <motion.div className="sectionPf-video__screen">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Av9zPpF4UlA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
 
       <motion.span
         className="carrouselPf__arrowR"
-        onClick={() => slide()}
+        onClick={() => setPos(pos - 1)}
         animate={opacityR}
       >
         <i className="fa-solid fa-circle-arrow-right"></i>

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import "../Css/SectionPorfolio.css";
 import CarrouselP from "../Items/CarrouselP";
@@ -9,8 +9,6 @@ const SectionPorfolio = (props) => {
   const { leng, idioma } = props;
   const { scrollYProgress } = useScroll();
 
-  //hooks
-  const [isOpen, setIsOpen] = useState(false);
   //titulo Porfolio
   const TituloPf = (prop) => {
     const { speed } = prop;
@@ -109,42 +107,14 @@ const SectionPorfolio = (props) => {
       ></img>
       <Porfoliobg img="/img/bg/Condor.png" speed={-3.3} />
       <TituloPf speed={3} />
-      <div className="sectionPf__works__ctr">
-        <motion.div
-          className="sectionPf__works"
-          ref={ref}
-          initial={{ opacity: 0, x: `-10%` }}
-          animate={fadeInPf}
-        >
-          <CarrouselP leng={leng} idioma={idioma} />
-        </motion.div>
-        <motion.div
-          className="sectionPf-video"
-          initial={{ opacity: 0, x: `-10%` }}
-          animate={fadeInPfV}
-        >
-          <motion.div
-            className="sectionPf-video__screen"
-            layout
-            data-isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <motion.iframe
-              layout
-              style={{
-                width: "100%",
-                height: "100%",
-                transform: isOpen ? "translateY(-429px)" : "translateY(429px)",
-              }}
-              src="https://www.youtube.com/embed/Av9zPpF4UlA"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></motion.iframe>
-          </motion.div>
-        </motion.div>
-      </div>
+      <motion.div
+        className="sectionPf__works"
+        ref={ref}
+        initial={{ opacity: 0, x: `-10%` }}
+        animate={fadeInPf}
+      >
+        <CarrouselP leng={leng} idioma={idioma} />
+      </motion.div>
     </section>
   );
 };

@@ -40,6 +40,10 @@ const Carrousel = (props) => {
         opacity: 0,
         display: "none",
       });
+      opacityL.start({
+        opacity: 1,
+        display: "flex",
+      });
     } else if (pos < 0) {
       opacityL.start({
         opacity: 1,
@@ -53,6 +57,10 @@ const Carrousel = (props) => {
       opacityL.start({
         opacity: 0,
         display: "none",
+      });
+      opacityR.start({
+        opacity: 1,
+        display: "flex",
       });
     }
 

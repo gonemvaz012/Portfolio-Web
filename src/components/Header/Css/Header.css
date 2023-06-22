@@ -71,7 +71,7 @@
 .headerbg__logos__ctnr {
   margin-right: 25px;
 }
-.headerbg__logos__ctnr > span {
+.headerbg__logos__ctnr > span > i {
   font-size: 5rem;
   color: white;
 }
