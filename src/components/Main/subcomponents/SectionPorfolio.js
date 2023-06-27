@@ -106,7 +106,7 @@ const SectionPorfolio = (props) => {
         alt=""
       ></img>
       <Porfoliobg img="/img/bg/Condor.png" speed={-3.3} />
-      <TituloPf speed={3} />
+      {/*<TituloPf speed={3} />*/}
       <motion.div
         className="sectionPf__works"
         ref={ref}
