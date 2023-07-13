@@ -83,9 +83,13 @@ const CarrouselP = (props) => {
             </div>
           </div>
           {/*IMAGEN CERTIFICADO*/}
-          <div className="carrouselPf__img-ctr">
+          <motion.div
+            className="carrouselPf__img-ctr"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
             <img src="../img/certificado.jpg" alt="" />
-          </div>
+          </motion.div>
           <motion.div className="sectionPf-video">
             <motion.div className="sectionPf-video__screen">
               <iframe

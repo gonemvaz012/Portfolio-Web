@@ -52,83 +52,82 @@ const SectionContact = (props) => {
   return (
     <section className="sectionContact" id="contact">
       <h1 className="contactTitle">{idioma.contact[leng].title}</h1>
-      <div className="contactInfo">
-        <div className="contactInfo__borderHero">
-          <div className="contactInfo__hero">
-            <HeroC speed={-2} />
+      <div className="contactInfo-form_ctrn">
+        <div className="contactInfo">
+          <div className="contactInfo__borderHero">
+            <div className="contactInfo__hero">
+              <HeroC speed={-2} />
+            </div>
+          </div>
+          <div className="contactInfo__data">
+            <h5> {idioma.contact[leng].title2}</h5>
+            <p>{idioma.contact[leng].text}</p>
+            <br />
+            <p>
+              <span>
+                <i class="fa-solid fa-mobile"></i>
+              </span>
+              +54 15 2613070313
+            </p>
+            <p>
+              <span>
+                <i className="fa-sharp fa-solid fa-envelope"></i>
+              </span>
+              <CopiarMail />
+              <motion.div
+                id="copy"
+                layout
+                data-isCopy={isCopy}
+                transition={{ opacity: { ease: "easeInOut" }, duration: 1 }}
+              >
+                Copy!
+              </motion.div>
+            </p>
+          </div>
+          <div className="contactInfo__media">
+            <motion.div
+              className="contactInfo__media__ctnr"
+              whileHover={{ y: -5, scale: 1.1 }}
+            >
+              <a
+                className="contactInfo__media__ctnr__a"
+                href="https://www.linkedin.com/in/gonzalo-vazquez-casas/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </motion.div>
+            <motion.div
+              className="contactInfo__media__ctnr"
+              whileHover={{ y: -5, scale: 1.1 }}
+            >
+              <a
+                className="contactInfo__media__ctnr__a"
+                href="https://gitlab.com/vazquez.gonzaloemanuel"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa-brands fa-gitlab"></i>
+              </a>
+            </motion.div>
+            <motion.div
+              className="contactInfo__media__ctnr"
+              whileHover={{ y: -5, scale: 1.1 }}
+            >
+              <a
+                className="contactInfo__media__ctnr__a"
+                href="https://github.com/gonemvaz012"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </motion.div>
           </div>
         </div>
-        <div className="contactInfo__data">
-          <h5> {idioma.contact[leng].title2}</h5>
-          <p>{idioma.contact[leng].text}</p>
-          <br />
-          <p>
-            <span>
-              <i class="fa-solid fa-mobile" style={{ color: "#00d5ff" }}></i>
-            </span>{" "}
-            +54 15 2613070313
-          </p>
-          <p>
-            <span>
-              <i
-                className="fa-sharp fa-solid fa-envelope"
-                style={{ color: "#00d5ff" }}
-              ></i>
-            </span>
-            <CopiarMail />
-            <motion.div
-              id="copy"
-              layout
-              data-isCopy={isCopy}
-              transition={{ opacity: { ease: "easeInOut" }, duration: 1 }}
-            >
-              Copy!
-            </motion.div>
-          </p>
-        </div>
-        <div className="contactInfo__media">
-          <motion.div
-            className="contactInfo__media__ctnr"
-            whileHover={{ y: -5, scale: 1.1 }}
-          >
-            <a
-              className="contactInfo__media__ctnr__a"
-              href="https://www.linkedin.com/in/gonzalo-vazquez-casas/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-          </motion.div>
-          <motion.div
-            className="contactInfo__media__ctnr"
-            whileHover={{ y: -5, scale: 1.1 }}
-          >
-            <a
-              className="contactInfo__media__ctnr__a"
-              href="https://gitlab.com/vazquez.gonzaloemanuel"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-gitlab"></i>
-            </a>
-          </motion.div>
-          <motion.div
-            className="contactInfo__media__ctnr"
-            whileHover={{ y: -5, scale: 1.1 }}
-          >
-            <a
-              className="contactInfo__media__ctnr__a"
-              href="https://github.com/gonemvaz012"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </motion.div>
-        </div>
+        <FormContact leng={leng} idioma={idioma} />
       </div>
-      <FormContact leng={leng} idioma={idioma} />
     </section>
   );
 };

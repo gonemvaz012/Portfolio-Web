@@ -21,7 +21,7 @@ const Main = (props) => {
         <SectionSkills inView={inView} leng={leng} idioma={idioma} />
       </section>
       <SectionPorfolio leng={leng} idioma={idioma} />
-      {/*<SectionContact leng={leng} idioma={idioma} />*/}
+      <SectionContact leng={leng} idioma={idioma} />
     </main>
   );
 };

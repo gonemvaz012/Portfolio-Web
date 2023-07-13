@@ -10,25 +10,33 @@
 
 .sectionContact {
   width: 100%;
-  height: 1110px;
+  height: 999px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   align-items: center;
+  align-content: center;
   justify-content: center;
   padding: 50px;
 }
 .contactTitle {
   width: 100%;
   font-family: "Helvetica Neue";
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   color: var(--secundary-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.contactInfo-form_ctrn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .contactInfo {
   width: 100%;
-  max-width: 500px;
-  height: 700px;
+  max-width: 450px;
+  height: 630px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -68,8 +76,8 @@
 }
 .contactInfo__hero {
   width: 100%;
-  max-width: 430px;
-  height: 285px;
+  max-width: 387px;
+  height: 256px;
   border: 10px solid var(--bg-secundary);
   overflow: hidden;
 }
@@ -98,10 +106,9 @@
   margin-bottom: 10px;
   position: relative;
 }
-.contactInfo__data > p > span {
-  font-family: "HelveticaNeueCyr";
+.contactInfo__data > p > span > i {
+  color: var(--secundary-color);
   font-size: 2rem;
-  font-weight: 300;
   margin-right: 10px;
 }
 .contactInfo__media {
@@ -119,8 +126,8 @@
   box-shadow: 3px 3px 5px #3c3c3c;
   position: relative;
 }
-.contactInfo__media__ctnr__a {
-  font-size: 2.2rem;
+.contactInfo__media__ctnr__a > i {
+  font-size: 2.1rem;
   color: var(--bg-dark-color);
   margin-bottom: 0px;
 }
@@ -140,4 +147,137 @@
 }
 #copy[data-isCopy="false"] {
   opacity: 0;
+}
+
+@media (max-width: 1040px) {
+  /* .sectionContact {
+    height: 1300px;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+  }*/
+  .contactInfo {
+    max-width: 405px;
+    height: 567px;
+    margin: 10px 20px;
+    padding: 10px;
+  }
+  .contactInfo__borderHero {
+    width: 95%;
+    padding: 10px 0px;
+  }
+  .contactInfo__hero {
+    max-width: 348px;
+    height: 230px;
+  }
+
+  .contactInfo__hero > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 900px) {
+  .sectionContact {
+    padding: 15px;
+  }
+  .contactTitle {
+    font-size: 2.4rem;
+  }
+  .contactInfo-form_ctrn {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contactInfo {
+    max-width: 344px;
+    height: 430px;
+    margin: 0px 0px 20px 0px;
+    padding: 8px 15px;
+  }
+  .contactInfo__borderHero {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .contactInfo__hero {
+    max-width: 260px;
+    height: 172px;
+  }
+  .contactInfo__data {
+    margin: 30px 0px 10px;
+    padding: 0px 8px;
+  }
+  .contactInfo__data > h5 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  .contactInfo__data > p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  .contactInfo__data > p > span > i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  .contactInfo__media__ctnr__a > i {
+    font-size: 1.2rem;
+  }
+  .contactInfo__data > p > div {
+    font-size: 0.7rem;
+  }
+}
+/*@media (max-width: 495px) {
+  .sectionContact {
+    padding: 15px;
+  }
+  .contactInfo {
+    height: auto;
+    margin: 5px;
+  }
+  .contactTitle {
+    font-size: 3rem;
+  }
+  .contactInfo__borderHero {
+    width: 90%;
+  }
+  .contactInfo__hero {
+    max-width: 310px;
+    height: 205px;
+  }
+  .contactInfo__data > h5 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .contactInfo__data > p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  .contactInfo__data > p > span > i {
+    font-size: 1.3rem;
+  }
+  .contactInfo__media__ctnr__a > i {
+    font-size: 1.5rem;
+  }
+}*/
+@media (max-width: 353px) {
+  .sectionContact {
+    height: 999px;
+  }
+  .contactInfo__borderHero {
+    width: 80%;
+  }
+  .contactInfo__hero {
+    height: 146px;
+  }
+  .contactInfo__data {
+    padding: 0px 5px;
+    margin-top: 15px;
+  }
+  .contactInfo__data > p {
+    font-size: 0.9rem;
+  }
+  .contactInfo__data > p > div {
+    font-size: 0.6rem;
+  }
+  .contactInfo__media__ctnr__a > i {
+    font-size: 1.1rem;
+  }
 }
