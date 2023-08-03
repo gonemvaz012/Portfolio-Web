@@ -15,7 +15,7 @@ const Header = () => {
   const { scrollYProgress } = useScroll();
   //bgLayer
   const LayerBG = (props) => {
-    const { src, speed, layer, alt } = props;
+    const { src, speed, layer, alt, slidex } = props;
     const yscroll = useTransform(scrollYProgress, [0, 1], [0, 100 * speed]);
     if (alt !== "montañas") {
       return (
@@ -24,6 +24,8 @@ const Header = () => {
           className={"headerbg__img " + layer}
           alt={alt}
           style={{ y: yscroll }}
+          animate={{ x: slidex }}
+          transition={{ duration: 2.7, ease: "linear", repeat: Infinity }}
         ></motion.img>
       );
     } else {
@@ -183,12 +185,14 @@ const Header = () => {
           speed={-8}
           layer="layer2"
           alt="edificios"
+          slidex={[0, 1, 0, -1, 0]}
         />
         <LayerBG
           src="/img/bg/capa1.png"
           speed={-8}
           layer="layer1"
           alt="edificios"
+          slidex={[0, -1, 0, 1, 0]}
         />
         {/*<img src='/img/bg/capa2.png' className='headerbg__img layer2' alt='edificios'></img>
         <img src='/img/bg/capa1.png' className='headerbg__img layer1' alt='edificios' ></img>*/}

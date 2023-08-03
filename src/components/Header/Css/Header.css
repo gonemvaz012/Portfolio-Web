@@ -122,6 +122,9 @@
 }
 
 @media (max-width: 985px) {
+  .header{
+    margin-bottom: 10px;
+  }
   .headerbg {
     padding: 50px 47px 10px 285px;
   }
@@ -132,6 +135,7 @@
   .headerbg__logos__ctnr > span > i {
     font-size: 4rem;
   }
+
 }
 
 @media (max-width: 769px) {

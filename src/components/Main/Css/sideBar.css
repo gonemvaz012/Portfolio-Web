@@ -97,7 +97,7 @@
 @media (max-width: 990px) {
   .aside {
     width: 100%;
-    max-width: 776px;
+    max-width: 803px;
     height: 500px;
     display: flex;
     flex-flow: row nowrap;
@@ -107,8 +107,8 @@
   }
   .photo-Container {
     width: 100%;
-    max-width: 265px;
-    height: 332px;
+    max-width: 238px;
+    height: 298px;
     top: 50px;
     left: 30px;
   }
@@ -118,20 +118,24 @@
     align-items: flex-start;
     width: 100%;
     height: 409px;
-    padding-left: 310px;
+    padding-left: 280px;
   }
   .text-container__h1 {
     text-align: start;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .text-container__p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 640px) {
   .photo-Container {
     width: 100%;
-    max-width: 186px;
-    height: 232px;
+    max-width: 180px;
+    height: 229px;
   }
   .text-container__h1 {
     font-size: 1.5rem;
@@ -140,12 +144,13 @@
     margin-bottom: 5px;
   }
   .text-container {
-    padding: 15px;
-    padding-left: 230px;
+    padding: 10px;
+    padding-left: 210px;
   }
   .text-container__p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
+ 
   #btn-download {
     font-size: 0.9rem;
   }
@@ -163,6 +168,9 @@
     padding: 15px;
     padding-top: 90px;
     min-width: 250px;
+  }
+  .text-container__p {
+    font-size: 1rem;
   }
   
   

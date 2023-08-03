@@ -14,8 +14,8 @@ const SectionPorfolio = (props) => {
     const { speed } = prop;
     const xvalue = useTransform(
       scrollYProgress,
-      [0, 0.6, 0.8],
-      [0, 60, 80 * speed]
+      [0, 0.6, 0.8], //0, 0.6 , 0.8
+      [0, 60, 80 * speed] //0, 60 , 80
     );
     return (
       <motion.h1
@@ -106,7 +106,7 @@ const SectionPorfolio = (props) => {
         alt=""
       ></img>
       <Porfoliobg img="/img/bg/Condor.png" speed={-3.3} />
-      {/*<TituloPf speed={3} />*/}
+      <TituloPf speed={3} />
       <motion.div
         className="sectionPf__works"
         ref={ref}

@@ -142,10 +142,10 @@
   opacity: 0;
 }
 
-#copy[data-isCopy="true"] {
+#copy[data-iscopy="true"] {
   opacity: 1;
 }
-#copy[data-isCopy="false"] {
+#copy[data-iscopy="false"] {
   opacity: 0;
 }
 

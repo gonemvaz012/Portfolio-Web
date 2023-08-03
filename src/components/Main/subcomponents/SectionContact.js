@@ -43,9 +43,12 @@ const SectionContact = (props) => {
     };
 
     return (
-      <div onClick={handleCopiar} style={{ cursor: "pointer" }}>
+      <span
+        onClick={handleCopiar}
+        style={{ cursor: "pointer", color: "#13b7ff" }}
+      >
         vazquez.gonzaloemanuel@gmail.com
-      </div>
+      </span>
     );
   };
 
@@ -65,7 +68,7 @@ const SectionContact = (props) => {
             <br />
             <p>
               <span>
-                <i class="fa-solid fa-mobile"></i>
+                <i className="fa-solid fa-mobile"></i>
               </span>
               +54 15 2613070313
             </p>
@@ -74,14 +77,14 @@ const SectionContact = (props) => {
                 <i className="fa-sharp fa-solid fa-envelope"></i>
               </span>
               <CopiarMail />
-              <motion.div
+              <motion.span
                 id="copy"
                 layout
-                data-isCopy={isCopy}
+                data-iscopy={isCopy}
                 transition={{ opacity: { ease: "easeInOut" }, duration: 1 }}
               >
                 Copy!
-              </motion.div>
+              </motion.span>
             </p>
           </div>
           <div className="contactInfo__media">
@@ -121,7 +124,7 @@ const SectionContact = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </a>
             </motion.div>
           </div>

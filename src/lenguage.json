@@ -67,15 +67,15 @@
     "proyect":[
         {
             "title":"PROYECTOS",
-            "description":"Proyecto del bootcamp Semillero Latam donde desarrollé Front - end con HTML, CSS y JavaScript.",
-            "description2":"Mi legado es un espacio donde se pueden conmemorar a seres queridos que ya no están.",
-            "btnGo":"ir a Mi Legado"
+            "description":"Proyecto del bootcamp Semillero Latam donde desarrollé el front-end con HTML, CSS y JavaScript.",
+            "description2":"Mi legado es un espacio donde se pueden conmemorar a seres queridos que ya no están con nosotros.",
+            "btnGo":"Visitar"
         },
         {
             "title":"PROJECTS",
-            "description":"Semillero Latam bootcamp project where I develop Front - end with HTML, CSS and JavaScript.",
-            "description2":"Mi Legado is a space where loved ones who are no longer here can be commemorated.",
-            "btnGo":"go to Mi Legado"
+            "description":"Semillero Latam bootcamp project where I develop front-end with HTML, CSS and JavaScript.",
+            "description2":"My legacy is a space where we can commemorate loved ones who are no longer with us.",
+            "btnGo":"Visit"
         }
     ],
     "contact":[
@@ -83,7 +83,7 @@
             "title":"CONTACTO",
             "title2":"Disponible",
             "title3":"Enviame un mensaje",
-            "text":"Estoy disponible full-time, conectate conmigo atravez de los siguientes medios",
+            "text":"Estoy disponible full-time, conectate conmigo atrevés de los siguientes medios",
             "lbl1":"Nombre",
             "lbl2":"Correo Electronico",
             "lbl3":"Asunto",

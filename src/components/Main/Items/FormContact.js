@@ -39,7 +39,7 @@ const FormContact = (props) => {
 
   // función para enviar peticion
   function enviarPeticion() {
-    fetch("https://formsubmit.co/ajax/gonemvaz012@gmail.com", {
+    fetch("https://formsubmit.co/ajax/vazquez.gonzaloemanuel@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const FormContact = (props) => {
           >
             <p>
               <span>
-                <i class="fa-regular fa-circle-check"></i>
+                <i className="fa-regular fa-circle-check"></i>
               </span>
               {idioma.contact[leng].alert1}
             </p>
@@ -112,25 +112,25 @@ const FormContact = (props) => {
           >
             <p>
               <span>
-                <i class="fa-regular fa-circle-check"></i>
+                <i className="fa-regular fa-circle-check"></i>
               </span>
               {idioma.contact[leng].alert2}
             </p>
           </motion.div>
           <div className="formContact-ctnr__form__input">
-            <label for="nombre">{idioma.contact[leng].lbl1}</label>
+            <label htmlFor="nombre">{idioma.contact[leng].lbl1}</label>
             <input type="text" name="nombre" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__input">
-            <label for="email">{idioma.contact[leng].lbl2}</label>
+            <label htmlFor="email">{idioma.contact[leng].lbl2}</label>
             <input type="email" name="email" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__input">
-            <label for="subject">{idioma.contact[leng].lbl3}</label>
+            <label htmlFor="subject">{idioma.contact[leng].lbl3}</label>
             <input type="text" name="asunto" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__textarea">
-            <label for="mensaje">{idioma.contact[leng].lbl4}</label>
+            <label htmlFor="mensaje">{idioma.contact[leng].lbl4}</label>
             <textarea
               id="mensaje"
               name="mensaje"

@@ -79,6 +79,11 @@ const CarrouselP = (props) => {
               </p>
               <button className="btn-enter">
                 {idioma.proyect[leng].btnGo}
+                <a
+                  className="btn-enter__link"
+                  href="https://mi.legado.quinto.site/"
+                  target="_blank"
+                ></a>
               </button>
             </div>
           </div>
@@ -97,9 +102,9 @@ const CarrouselP = (props) => {
                 height="100%"
                 src="https://www.youtube.com/embed/Av9zPpF4UlA"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </motion.div>
           </motion.div>

@@ -192,6 +192,8 @@
 }
 
 @media (max-width: 640px) {
+   
+  
   .skills__title-ctr,
   .tools__title-ctr,
   .aptitudes__title-ctr {
@@ -228,7 +230,6 @@
   .tools__border {
     height: 85%;
   }
-
   .aptitudes {
     max-height: 298px;
     padding: 5px 8px 8px 8px;
@@ -239,7 +240,6 @@
 }
 
 @media(max-width:615px){
-  
   .skills__carrousel__view {
     width: 400%;
     justify-content: space-around;

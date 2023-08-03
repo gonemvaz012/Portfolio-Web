@@ -5,25 +5,25 @@
         {
           "name": "Java",
           "title": "Desarrollo Back-end",
-          "description": "Desarrollo de microservicios con spring boot implementando  patron de diseño MVC para el funcionamiento del CRUD en  paginas web ",
+          "description": "Desarrollo de microservicios con spring boot implementando patrón de diseño MVC para el funcionamiento del CRUD en páginas web ",
           "icon": "img/icons/JavaW.png"
         },
         {
           "name": "HTML-CSS",
           "title": "Desarrollo Front-end",
-          "description": "Diseño de vistas y maquetación de paginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
+          "description": "Diseño de vistas y maquetación de páginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
           "icon": "img/icons/Html-Css.png"
         },
         {
           "name": "JavaScript",
           "title": "Desarrollo Front-end",
-          "description": "Desarrollo de la interaccion del usuario y manipulación de DOM HTML, así como tambien el manejo de peticiones HTTP mediante API fetch",
+          "description": "Desarrollo de la interacción del usuario, manipulación de DOM HTML y manejo de peticiones HTTP mediante API fetch",
           "icon": "img/icons/JS.png"
         },
         {
           "name": "React Js",
           "title": "Desarrollo Front-end",
-          "description": "Creación de proyectos web mediante la implementación de componentes y uso de hooks para el manejo de estados y demas características",
+          "description": "Creación de proyectos web mediante la implementación de componentes y uso de hooks para el manejo de estados y otras funciones",
           "icon": "img/icons/React.png"
         }
       

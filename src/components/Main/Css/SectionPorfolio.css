@@ -63,6 +63,9 @@
   }
 }
 @media (max-width: 769px) {
+  .sectionPf__works {
+   margin: 0px 25px;
+  }
   .sectionPf__h1 {
     font-size: 5rem;
   }
@@ -82,13 +85,20 @@
   .sectionPf__works {
     display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 390px;
     height: 376px;
+    padding: 0px 5px;
   }
   .sectionPf__bg {
     height: 80%;
+    top: 54px;
+  }
+  .condor{
+    top: 120px;
   }
   .sectionPf__h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
+    right: 30%;
+    margin-bottom: 18px;
   }
 }

@@ -16,12 +16,7 @@
   place-content: center;
 }
 
-.others {
-  grid-area: others;
-  max-height: 415px;
-  background-color: var(--bg-secundary);
-  padding: 40px;
-}
+
 
 @media (max-width: 990px) {
   .section-aboutMe {
@@ -38,7 +33,7 @@
 
 @media (max-width:485px){
     .section-aboutMe {
-        margin: 0px 15px;
+        margin: 0px 25px;
         gap: 8px;
       }
 }

@@ -38,7 +38,7 @@ function App() {
         <Footer />
       </Suspense>
       <motion.div className="btn-lg" onClick={translate}>
-        {Idioma.btn[lenguage].lbl} <i class="fa-solid fa-language"></i>
+        {Idioma.btn[lenguage].lbl} <i className="fa-solid fa-language"></i>
       </motion.div>
     </div>
   );
