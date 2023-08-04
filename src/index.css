@@ -1,13 +1,79 @@
-body {
+:root {
+  --border-color: #707070;
+  --back-color: #1c1c1c;
+  --bg-dark-color: #1d1d1d;
+  --bg-secundary: #262626;
+  --secundary-color: #13b7ff;
+  --font-Jost: "Jost", sans-serif;
+  --font-Fira-sans: "Fira Sans", sans-serif;
+  --transition: all 400ms ease-in-out;
+  --bar-lenght: 0%;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* display: flex;
+  justify-content: center;*/
+  background-color: var(--back-color);
+
+  position: relative;
+}
+
+.loading {
+  width: 100px;
+  position: fixed;
+  top: 45%;
+  left: 45%;
+}
+.loading > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-lg {
+  position: fixed;
+  top: 35px;
+  right: 15%;
+  font-family: "HelveticaNeueCyr";
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 39px;
+  padding: 5px;
+  background-color: var(--border-color);
+  color: var(--back-color);
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 300ms ease-in-out;
+  z-index: 101;
+}
+.btn-lg:hover {
+  border-radius: 0px;
+  padding: 6px;
+  background-color: var(--secundary-color);
+}
+@media(max-width:720px){
+  .btn-lg {
+    position: fixed;
+    top: 15px;
+    right: 25%;
+    font-size: 1rem;
+  }
+}
+@media(max-width:412px){
+  .btn-lg {
+    position: fixed;
+    top: 10px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 485px) {
+  * {
+    font-size: 15px;
+  }
 }

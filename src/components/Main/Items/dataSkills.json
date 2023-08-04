@@ -1,0 +1,62 @@
+{
+  "skill": [
+    {
+      "data":[
+        {
+          "name": "Java",
+          "title": "Desarrollo Back-end",
+          "description": "Desarrollo de microservicios con spring boot implementando patrón de diseño MVC para el funcionamiento del CRUD en páginas web ",
+          "icon": "img/icons/JavaW.png"
+        },
+        {
+          "name": "HTML-CSS",
+          "title": "Desarrollo Front-end",
+          "description": "Diseño de vistas y maquetación de páginas web responsive mediante Flex-Box, CSS media Queries y CSS GRID",
+          "icon": "img/icons/Html-Css.png"
+        },
+        {
+          "name": "JavaScript",
+          "title": "Desarrollo Front-end",
+          "description": "Desarrollo de la interacción del usuario, manipulación de DOM HTML y manejo de peticiones HTTP mediante API fetch",
+          "icon": "img/icons/JS.png"
+        },
+        {
+          "name": "React Js",
+          "title": "Desarrollo Front-end",
+          "description": "Creación de proyectos web mediante la implementación de componentes y uso de hooks para el manejo de estados y otras funciones",
+          "icon": "img/icons/React.png"
+        }
+      
+      ]
+    },
+    {
+      "data":[
+        {
+          "name": "Java",
+          "title": "Back-end develop",
+          "description": "Development of microservices with spring boot implementing MVC design pattern for the operation of the CRUD in web pages ",
+          "icon": "img/icons/JavaW.png"
+        },
+        {
+          "name": "HTML-CSS",
+          "title": "Front-end develop",
+          "description": "Design of views and layout of responsive web pages using Flex-Box, CSS media Queries and CSS GRID",
+          "icon": "img/icons/Html-Css.png"
+        },
+        {
+          "name": "JavaScript",
+          "title": "Front-end develop",
+          "description": "Development of user interaction and HTML DOM manipulation, as well as HTTP request handling via fetch API",
+          "icon": "img/icons/JS.png"
+        },
+        {
+          "name": "React Js",
+          "title": "Front-end develop",
+          "description": "Creation of web projects by implementing components and using hooks to manage states and other features",
+          "icon": "img/icons/React.png"
+        }
+      ]
+    }
+      
+  ]
+}
