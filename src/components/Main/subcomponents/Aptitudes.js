@@ -1,9 +1,16 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import BarProgress from "../Items/BarProgress";
+import Lenguage from "../../Context/lenguage.json";
+import { useTranslateContext } from "../../Context/translateContext";
 
 const Aptitudes = (props) => {
-  const { inView, animation, leng, idioma } = props;
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.aptitude[0] : Lenguage.aptitude[1];
+  //contexto para cambiar idioma
+  const { inView, animation } = props;
   const { x, y } = animation;
   const aptitudes = useAnimation();
   //funcion que ejecuta las animaciones segun el inView
@@ -49,15 +56,15 @@ const Aptitudes = (props) => {
       <div className="aptitudes__border">
         <div className="aptitudes__items">
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">{idioma.aptitude[leng].item1}</p>
+            <p className="aptitudes__items__p">{idioma.item1}</p>
           </div>
           <BarProgress porcent={40} />
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">{idioma.aptitude[leng].item2}</p>
+            <p className="aptitudes__items__p">{idioma.item2}</p>
           </div>
           <BarProgress porcent={90} />
           <div className="aptitudes__items__ctn">
-            <p className="aptitudes__items__p">{idioma.aptitude[leng].item3}</p>
+            <p className="aptitudes__items__p">{idioma.item3}</p>
           </div>
           <BarProgress porcent={80} />
         </div>

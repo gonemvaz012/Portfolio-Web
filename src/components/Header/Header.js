@@ -155,9 +155,9 @@ const Header = () => {
 
         <motion.div
           className="headerbg__logos"
-          initial={{ opacity: 0, y: -5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 7 }}
         >
           <div className="headerbg__logos__ctnr">
             <span>

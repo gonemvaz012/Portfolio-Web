@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FormContact from "../Items/FormContact";
 import "../Css/SectionContact.css";
+import { useTranslateContext } from "../../Context/translateContext";
+import Lenguage from "../../Context/lenguage.json";
 
-const SectionContact = (props) => {
-  const { leng, idioma } = props;
+const SectionContact = () => {
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.contact[0] : Lenguage.contact[1];
+  //contexto para cambiar idioma
+
   const { scrollYProgress } = useScroll();
   const [isCopy, setIsCopy] = useState(false); //estado para habilitar cartel copy
   //titulo Porfolio
@@ -54,7 +61,7 @@ const SectionContact = (props) => {
 
   return (
     <section className="sectionContact" id="contact">
-      <h1 className="contactTitle">{idioma.contact[leng].title}</h1>
+      <h1 className="contactTitle">{idioma.title}</h1>
       <div className="contactInfo-form_ctrn">
         <div className="contactInfo">
           <div className="contactInfo__borderHero">
@@ -63,8 +70,8 @@ const SectionContact = (props) => {
             </div>
           </div>
           <div className="contactInfo__data">
-            <h5> {idioma.contact[leng].title2}</h5>
-            <p>{idioma.contact[leng].text}</p>
+            <h5> {idioma.title2}</h5>
+            <p>{idioma.text}</p>
             <br />
             <p>
               <span>
@@ -129,7 +136,7 @@ const SectionContact = (props) => {
             </motion.div>
           </div>
         </div>
-        <FormContact leng={leng} idioma={idioma} />
+        <FormContact idioma={idioma} />
       </div>
     </section>
   );

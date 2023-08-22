@@ -7,7 +7,7 @@ import "../Css/SectionPorfolio.css";
 
 const CarrouselP = (props) => {
   //props and hooks
-  const { leng, idioma } = props;
+  const { idioma } = props;
   const [pos, setPos] = useState(0);
 
   const animation = useAnimation();
@@ -72,13 +72,13 @@ const CarrouselP = (props) => {
               <h5 className="sectionPf__works__ctnr__h5">Semillero Latam</h5>
               <h2 className="sectionPf__works__ctnr__h2">Mi Legado</h2>
               <p className="sectionPf__works__ctnr__p">
-                {idioma.proyect[leng].description}
+                {idioma.description}
                 <br></br>
                 <br></br>
-                {idioma.proyect[leng].description2}
+                {idioma.description2}
               </p>
               <button className="btn-enter">
-                {idioma.proyect[leng].btnGo}
+                {idioma.btnGo}
                 <a
                   className="btn-enter__link"
                   href="https://mi.legado.quinto.site/"

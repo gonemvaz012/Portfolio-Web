@@ -3,10 +3,15 @@ import React, { useEffect, useState } from "react";
 import Card from "../Items/Card";
 
 import Data from "../Items/dataSkills.json";
+import { useTranslateContext } from "../../Context/translateContext";
 
-const Carrousel = (props) => {
-  const { leng } = props;
+const Carrousel = () => {
+  //Contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
   const { skill } = Data;
+  let idioma =
+    contextTranslate === "ES" ? Data.skill[0].data : Data.skill[1].data;
+  //Contexto para cambiar idioma
 
   //hooks
   const [pos, setPos] = useState(0);
@@ -92,10 +97,10 @@ const Carrousel = (props) => {
       </div>
       <div className="skills__carrousel__screen">
         <motion.div className="skills__carrousel__view" animate={animation}>
-          <Card data={skill[leng].data[0]} />
-          <Card data={skill[leng].data[1]} />
-          <Card data={skill[leng].data[2]} />
-          <Card data={skill[leng].data[3]} />
+          <Card data={idioma[0]} />
+          <Card data={idioma[1]} />
+          <Card data={idioma[2]} />
+          <Card data={idioma[3]} />
         </motion.div>
       </div>
       <div className="skills__slideR">

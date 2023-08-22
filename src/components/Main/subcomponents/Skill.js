@@ -1,13 +1,20 @@
 import React, { useEffect } from "react";
 import Carrousel from "./Carrousel";
 import { motion, useAnimation } from "framer-motion";
+import { useTranslateContext } from "../../Context/translateContext";
+import Lenguage from "../../Context/lenguage.json";
 
 const Skill = (props) => {
-  const { inView, animation, leng, idioma } = props;
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.skills[0] : Lenguage.skills[1];
+  //contexto para cambiar idioma
+
+  const { inView, animation } = props;
   const { x, y } = animation;
   const skill = useAnimation();
 
-  //console.log(idioma.skills[leng].title);
   //funcion que ejecuta la animacion
   const runInView = (state, x, y) => {
     if (state) {
@@ -46,10 +53,10 @@ const Skill = (props) => {
       animate={skill}
     >
       <div className="skills__title-ctr">
-        <h2 className="skills__title-ctr__h2">{idioma.skills[leng].title}</h2>
+        <h2 className="skills__title-ctr__h2">{idioma.title}</h2>
       </div>
       <div className="skills__border">
-        <Carrousel leng={leng} idioma={idioma} />
+        <Carrousel />
       </div>
     </motion.div>
   );

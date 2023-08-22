@@ -1,40 +1,42 @@
 {
     "btn":[
         {
-            "lbl":"ES"
+            "lblEs":"ES"
         },
         {
-            "lbl":"ENG"
+            "lblEng":"ENG"
         }
     ],
-    "navbar":[
+    "navbar":
         {
+            "ES": {
             "home":"INICIO",
             "item1":"SOBRE MI",
             "item2":"PROYECTOS",
             "item3":"CONTACTO",
             "item4":"ES"
+            },
+            "ENG":  {
+                "home":"HOME",
+                "item1":"ABOUT ME",
+                "item2":"PROJECTS",
+                "item3":"CONTACT",
+                "item4":"ENG"
+            }
         },
-        {
-            "home":"HOME",
-            "item1":"ABOUT ME",
-            "item2":"PROJECTS",
-            "item3":"CONTACT",
-            "item4":"ENG"
-        }
-    ],
-    "sidebar":[
-        {
+    
+    "sidebar":{
+       "ES": {
             "title":"SOBRE MI",
             "description":"Soy una persona con un gran interes por aprender las nuevas tecnologías y herramientas que se presentan a diario en el entorno de la programacion IT, asi como también, el interes de desarrollar de manera constante las habilidades blandas necesarías para llevar a cabo un buen trabajo en equipo. Ya sea colabarando o aportando ideas que busquen solucionar los problemas del equipo.",
             "btnCv":"Descargar CV"
         },
-        {
+       "ENG": {
             "title":"ABOUT ME",
             "description":"I am a person with a great interest in learning the new technologies and tools that are presented daily in the IT programming environment, as well as the interest in constantly developing the soft skills necessary to carry out a good job in equipment. Either collaborating or contributing ideas that seek to solve the team's problems.",
             "btnCv":"Download CV"
         }
-    ],
+},
     "skills":[
         {
             "title":"HABILIDADES"

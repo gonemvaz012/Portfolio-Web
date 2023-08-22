@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Lenguage from "../../Context/lenguage.json";
+import { useTranslateContext } from "../../Context/translateContext";
 
 const Tools = (props) => {
-  const { inView, animation, leng, idioma } = props;
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.tools[0] : Lenguage.tools[1];
+  //contexto para cambiar idioma
+
+  const { inView, animation } = props;
   const { x, y } = animation;
   const tools = useAnimation();
   //funcion que ejecuta las animaciones segun el inView
@@ -43,7 +51,7 @@ const Tools = (props) => {
       whileInView={{ opacity: 1 }}
     >
       <div className="tools__title-ctr">
-        <h2 className="tools__title-ctr__h2">{idioma.tools[leng].title}</h2>
+        <h2 className="tools__title-ctr__h2">{idioma.title}</h2>
       </div>
       <div className="tools__border">
         <div className="tools__items-ctr">

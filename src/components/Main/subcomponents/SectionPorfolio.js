@@ -4,9 +4,15 @@ import React, { useEffect } from "react";
 
 import "../Css/SectionPorfolio.css";
 import CarrouselP from "../Items/CarrouselP";
+import { useTranslateContext } from "../../Context/translateContext";
+import Lenguage from "../../Context/lenguage.json";
 
 const SectionPorfolio = (props) => {
-  const { leng, idioma } = props;
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.proyect[0] : Lenguage.proyect[1];
+  //contexto para cambiar idioma
   const { scrollYProgress } = useScroll();
 
   //titulo Porfolio
@@ -25,7 +31,7 @@ const SectionPorfolio = (props) => {
         transition={{ delay: 0.3, duration: 1 }}
         style={{ x: xvalue }}
       >
-        {idioma.proyect[leng].title}
+        {idioma.title}
       </motion.h1>
     );
   };
@@ -39,32 +45,16 @@ const SectionPorfolio = (props) => {
     if (inView) {
       fadeInPf.start({
         opacity: 1,
-        x: `0%`,
+        y: `0%`,
         transition: {
           duration: 1.3,
           delay: 1,
         },
       });
-      fadeInPfV.start({
-        opacity: 1,
-        x: `0%`,
-        transition: {
-          duration: 1.3,
-          delay: 1.6,
-        },
-      });
     } else {
       fadeInPf.start({
         opacity: 0,
-        x: `10%`,
-        transition: {
-          duration: 0.3,
-          delay: 0,
-        },
-      });
-      fadeInPfV.start({
-        opacity: 0,
-        x: `-10%`,
+        y: `10%`,
         transition: {
           duration: 0.3,
           delay: 0,
@@ -110,10 +100,10 @@ const SectionPorfolio = (props) => {
       <motion.div
         className="sectionPf__works"
         ref={ref}
-        initial={{ opacity: 0, x: `-10%` }}
+        initial={{ opacity: 0, y: `-10%` }}
         animate={fadeInPf}
       >
-        <CarrouselP leng={leng} idioma={idioma} />
+        <CarrouselP idioma={idioma} />
       </motion.div>
     </section>
   );

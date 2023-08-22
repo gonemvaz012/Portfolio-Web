@@ -3,7 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import "../Css/formContact.css";
 
 const FormContact = (props) => {
-  const { leng, idioma } = props;
+  const { idioma } = props;
   //declaracion animations
   const send = useAnimation();
   const fail = useAnimation();
@@ -90,9 +90,7 @@ const FormContact = (props) => {
     <div className="formContact-ctnr">
       <form onSubmit={enviarFormulario} className="formContact-ctnr__form">
         <div className="formContact-ctnr__form__border">
-          <h2 className="formContact-ctnr__form__title">
-            {idioma.contact[leng].title3}
-          </h2>
+          <h2 className="formContact-ctnr__form__title">{idioma.title3}</h2>
           <motion.div
             className="alert_exito"
             initial={{ opacity: 0, x: -20 }}
@@ -102,7 +100,7 @@ const FormContact = (props) => {
               <span>
                 <i className="fa-regular fa-circle-check"></i>
               </span>
-              {idioma.contact[leng].alert1}
+              {idioma.alert1}
             </p>
           </motion.div>
           <motion.div
@@ -114,23 +112,23 @@ const FormContact = (props) => {
               <span>
                 <i className="fa-regular fa-circle-check"></i>
               </span>
-              {idioma.contact[leng].alert2}
+              {idioma.alert2}
             </p>
           </motion.div>
           <div className="formContact-ctnr__form__input">
-            <label htmlFor="nombre">{idioma.contact[leng].lbl1}</label>
+            <label htmlFor="nombre">{idioma.lbl1}</label>
             <input type="text" name="nombre" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__input">
-            <label htmlFor="email">{idioma.contact[leng].lbl2}</label>
+            <label htmlFor="email">{idioma.lbl2}</label>
             <input type="email" name="email" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__input">
-            <label htmlFor="subject">{idioma.contact[leng].lbl3}</label>
+            <label htmlFor="subject">{idioma.lbl3}</label>
             <input type="text" name="asunto" onChange={onChangeInput}></input>
           </div>
           <div className="formContact-ctnr__form__textarea">
-            <label htmlFor="mensaje">{idioma.contact[leng].lbl4}</label>
+            <label htmlFor="mensaje">{idioma.lbl4}</label>
             <textarea
               id="mensaje"
               name="mensaje"
@@ -141,9 +139,7 @@ const FormContact = (props) => {
             ></textarea>
           </div>
           <div className="formContact-ctnr__form__sutmit">
-            <button onClick={enviarFormulario}>
-              {idioma.contact[leng].submit}
-            </button>
+            <button onClick={enviarFormulario}>{idioma.submit}</button>
           </div>
           <input
             type="hidden"

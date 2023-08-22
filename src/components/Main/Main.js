@@ -17,11 +17,11 @@ const Main = (props) => {
   return (
     <main className="main" ref={ref}>
       <section className="section-aboutMe">
-        <SideBar leng={leng} idioma={idioma} />
-        <SectionSkills inView={inView} leng={leng} idioma={idioma} />
+        <SideBar />
+        <SectionSkills inView={inView} />
       </section>
-      <SectionPorfolio leng={leng} idioma={idioma} />
-      <SectionContact leng={leng} idioma={idioma} />
+      <SectionPorfolio />
+      <SectionContact />
     </main>
   );
 };
