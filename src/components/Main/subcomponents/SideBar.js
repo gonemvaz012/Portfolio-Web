@@ -22,7 +22,7 @@ const SideBar = () => {
 
   useEffect(() => {
     if (windowWidth <= 990) {
-      setY1(0.2);
+      setY1(0.15);
       setY2(20);
       setSpeedScroll(-17);
     } else {

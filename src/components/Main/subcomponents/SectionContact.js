@@ -50,10 +50,7 @@ const SectionContact = () => {
     };
 
     return (
-      <span
-        onClick={handleCopiar}
-        style={{ cursor: "pointer", color: "#13b7ff" }}
-      >
+      <span className="contactInfo__data__item__mail" onClick={handleCopiar}>
         vazquez.gonzaloemanuel@gmail.com
       </span>
     );
@@ -71,16 +68,16 @@ const SectionContact = () => {
           </div>
           <div className="contactInfo__data">
             <h5> {idioma.title2}</h5>
-            <p>{idioma.text}</p>
+            <p className="contactInfo__data__item">{idioma.text}</p>
             <br />
-            <p>
-              <span>
+            <p className="contactInfo__data__item">
+              <span className="contactInfo__data__item__span">
                 <i className="fa-solid fa-mobile"></i>
               </span>
               +54 15 2613070313
             </p>
-            <p>
-              <span>
+            <p className="contactInfo__data__item">
+              <span className="contactInfo__data__item__span">
                 <i className="fa-sharp fa-solid fa-envelope"></i>
               </span>
               <CopiarMail />

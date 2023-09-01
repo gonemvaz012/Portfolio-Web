@@ -97,7 +97,7 @@
   color: var(--secundary-color);
   margin-bottom: 10px;
 }
-.contactInfo__data > p {
+.contactInfo__data__item {
   display: flex;
   font-family: "HelveticaNeueCyr";
   font-size: 1.2rem;
@@ -106,10 +106,17 @@
   margin-bottom: 10px;
   position: relative;
 }
-.contactInfo__data > p > span > i {
+.contactInfo__data__item__span > i {
   color: var(--secundary-color);
   font-size: 2rem;
   margin-right: 10px;
+}
+.contactInfo__data__item__mail{
+  cursor: "pointer";
+  color: #13b7ff ;
+  font-size: 1rem;
+  word-wrap: break-word;
+
 }
 .contactInfo__media {
   display: flex;
@@ -150,12 +157,6 @@
 }
 
 @media (max-width: 1040px) {
-  /* .sectionContact {
-    height: 1300px;
-    align-items: center;
-    align-content: space-between;
-    justify-content: center;
-  }*/
   .contactInfo {
     max-width: 405px;
     height: 567px;
@@ -209,54 +210,22 @@
     font-size: 1.1rem;
     margin-bottom: 6px;
   }
-  .contactInfo__data > p {
+  .contactInfo__data__item {
     font-size: 0.9rem;
     margin-bottom: 6px;
   }
-  .contactInfo__data > p > span > i {
+  .contactInfo__data__item__span > i {
     font-size: 1.2rem;
     margin-right: 8px;
   }
   .contactInfo__media__ctnr__a > i {
     font-size: 1.2rem;
   }
-  .contactInfo__data > p > div {
+  .contactInfo__data__item__mail {
     font-size: 0.7rem;
   }
 }
-/*@media (max-width: 495px) {
-  .sectionContact {
-    padding: 15px;
-  }
-  .contactInfo {
-    height: auto;
-    margin: 5px;
-  }
-  .contactTitle {
-    font-size: 3rem;
-  }
-  .contactInfo__borderHero {
-    width: 90%;
-  }
-  .contactInfo__hero {
-    max-width: 310px;
-    height: 205px;
-  }
-  .contactInfo__data > h5 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  .contactInfo__data > p {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-  }
-  .contactInfo__data > p > span > i {
-    font-size: 1.3rem;
-  }
-  .contactInfo__media__ctnr__a > i {
-    font-size: 1.5rem;
-  }
-}*/
+
 @media (max-width: 353px) {
   .sectionContact {
     height: 999px;
@@ -271,11 +240,8 @@
     padding: 0px 5px;
     margin-top: 15px;
   }
-  .contactInfo__data > p {
+  .contactInfo__data__item {
     font-size: 0.9rem;
-  }
-  .contactInfo__data > p > div {
-    font-size: 0.6rem;
   }
   .contactInfo__media__ctnr__a > i {
     font-size: 1.1rem;
