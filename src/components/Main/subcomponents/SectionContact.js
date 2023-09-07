@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FormContact from "../Items/FormContact";
 import "../Css/SectionContact.css";
+import { useTranslateContext } from "../../Context/translateContext";
+import Lenguage from "../../Context/lenguage.json";
 
-const SectionContact = (props) => {
-  const { leng, idioma } = props;
+const SectionContact = () => {
+  //contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.contact[0] : Lenguage.contact[1];
+  //contexto para cambiar idioma
+
   const { scrollYProgress } = useScroll();
   const [isCopy, setIsCopy] = useState(false); //estado para habilitar cartel copy
   //titulo Porfolio
@@ -43,10 +50,7 @@ const SectionContact = (props) => {
     };
 
     return (
-      <span
-        onClick={handleCopiar}
-        style={{ cursor: "pointer", color: "#13b7ff" }}
-      >
+      <span className="contactInfo__data__item__mail" onClick={handleCopiar}>
         vazquez.gonzaloemanuel@gmail.com
       </span>
     );
@@ -54,7 +58,7 @@ const SectionContact = (props) => {
 
   return (
     <section className="sectionContact" id="contact">
-      <h1 className="contactTitle">{idioma.contact[leng].title}</h1>
+      <h1 className="contactTitle">{idioma.title}</h1>
       <div className="contactInfo-form_ctrn">
         <div className="contactInfo">
           <div className="contactInfo__borderHero">
@@ -63,17 +67,17 @@ const SectionContact = (props) => {
             </div>
           </div>
           <div className="contactInfo__data">
-            <h5> {idioma.contact[leng].title2}</h5>
-            <p>{idioma.contact[leng].text}</p>
+            <h5> {idioma.title2}</h5>
+            <p className="contactInfo__data__item">{idioma.text}</p>
             <br />
-            <p>
-              <span>
+            <p className="contactInfo__data__item">
+              <span className="contactInfo__data__item__span">
                 <i className="fa-solid fa-mobile"></i>
               </span>
               +54 15 2613070313
             </p>
-            <p>
-              <span>
+            <p className="contactInfo__data__item">
+              <span className="contactInfo__data__item__span">
                 <i className="fa-sharp fa-solid fa-envelope"></i>
               </span>
               <CopiarMail />
@@ -129,7 +133,7 @@ const SectionContact = (props) => {
             </motion.div>
           </div>
         </div>
-        <FormContact leng={leng} idioma={idioma} />
+        <FormContact idioma={idioma} />
       </div>
     </section>
   );

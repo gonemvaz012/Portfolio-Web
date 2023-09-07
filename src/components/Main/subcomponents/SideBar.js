@@ -2,29 +2,47 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../../../index.css";
 import "../Css/sideBar.css";
+import Lenguage from "../../Context/lenguage.json";
+import { useTranslateContext } from "../../Context/translateContext";
 
-const SideBar = (props) => {
-  const { leng, idioma } = props;
+const SideBar = () => {
+  //Contexto para cambiar idioma
+  const { contextTranslate } = useTranslateContext();
+  let idioma =
+    contextTranslate === "ES" ? Lenguage.sidebar.ES : Lenguage.sidebar.ENG;
+  //Contexto para cambiar idioma
+
+  //Scroll FOTO
   const { scrollYProgress } = useScroll();
   const linkRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [y1, setY1] = useState(0.3);
   const [y2, setY2] = useState(30);
   const [speedScroll, setSpeedScroll] = useState(-11);
 
   useEffect(() => {
     if (windowWidth <= 990) {
-      setY1(0.2);
+      setY1(0.05);
       setY2(20);
       setSpeedScroll(-17);
+      /* if (windowHeight >= 1000) {
+        setY1(0.2);
+        setY2(50);
+        setSpeedScroll(-17);
+      } else {
+       //scroll action
+      }*/
     } else {
       setY1(0.3);
       setY2(30);
       setSpeedScroll(-11);
     }
+
     //funcion para actualizar el ancho de la pantalla cuando cambia
     function handleResize() {
       setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
     }
 
     // Agregar el listener para manejar el cambio de tamaño de la ventana
@@ -34,12 +52,8 @@ const SideBar = (props) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, [windowWidth, windowHeight]);
 
-  //funcion para descargar cv
-  function descargar() {
-    linkRef.current.click();
-  }
   //foto perfil
   const PhotoP = (prop) => {
     const { speed } = prop;
@@ -54,6 +68,12 @@ const SideBar = (props) => {
       </motion.div>
     );
   };
+  //Scroll FOTO
+
+  //funcion para descargar cv
+  function descargar() {
+    linkRef.current.click();
+  }
 
   return (
     <aside className="aside">
@@ -67,7 +87,7 @@ const SideBar = (props) => {
           whileInView={{ opacity: 1, x: `0%` }}
           transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
         >
-          {idioma.sidebar[leng].title}
+          {idioma.title}
         </motion.h1>
         <motion.p
           className="text-container__p"
@@ -75,10 +95,10 @@ const SideBar = (props) => {
           whileInView={{ opacity: 1, x: `0%` }}
           transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }}
         >
-          {idioma.sidebar[leng].description}
+          {idioma.description}
         </motion.p>
         <button id="btn-download" onClick={descargar}>
-          {idioma.sidebar[leng].btnCv}
+          {idioma.btnCv}
         </button>
         <a
           href="../GonzaloVazquez-CV.pdf"

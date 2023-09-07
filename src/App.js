@@ -2,7 +2,8 @@ import Navbar from "./components/Navbar";
 import "./index.css";
 import React, { Suspense, lazy, useState } from "react";
 import { motion } from "framer-motion";
-import Idioma from "./lenguage.json";
+import Idioma from "./components/Context/lenguage.json";
+import { TranslateContextProvider } from "./components/Context/translateContext";
 const Header = React.lazy(() => import("./components/Header/Header"));
 const Main = React.lazy(() => import("./components/Main"));
 const Footer = React.lazy(() => import("./components/Footer/Footer"));
@@ -31,15 +32,17 @@ function App() {
   }
   return (
     <div>
-      <Navbar leng={lenguage} idioma={Idioma} />
-      <Suspense delayMs={1} fallback={<Loading />}>
-        <Header />
-        <Main leng={lenguage} idioma={Idioma} />
-        <Footer />
-      </Suspense>
-      <motion.div className="btn-lg" onClick={translate}>
+      <TranslateContextProvider>
+        <Navbar />
+        <Suspense delayMs={1} fallback={<Loading />}>
+          <Header />
+          <Main leng={lenguage} idioma={Idioma} />
+          <Footer />
+        </Suspense>
+      </TranslateContextProvider>
+      {/* <motion.div className="btn-lg" onClick={translate}>
         {Idioma.btn[lenguage].lbl} <i className="fa-solid fa-language"></i>
-      </motion.div>
+      </motion.div>*/}
     </div>
   );
 }

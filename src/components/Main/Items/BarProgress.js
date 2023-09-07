@@ -5,8 +5,7 @@ import { useInView } from "react-intersection-observer";
 const BarProgress = (props) => {
   let [count, setCount] = useState(0);
   const animation = useAnimation();
-  const { porcent } = props;
-  const [ref, inView] = useInView();
+  const { porcent, inView } = props;
   const progress = 100 - porcent;
 
   const incrementPer = () => {
@@ -39,7 +38,7 @@ const BarProgress = (props) => {
   }, [inView, animation]);
 
   return (
-    <div className="aptitudes__items__progress" ref={ref}>
+    <div className="aptitudes__items__progress">
       <div className="aptitudes__items__bar">
         <motion.div
           className="aptitudes__items__barProgress"
