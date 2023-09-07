@@ -16,23 +16,33 @@ const SideBar = () => {
   const { scrollYProgress } = useScroll();
   const linkRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [y1, setY1] = useState(0.3);
   const [y2, setY2] = useState(30);
   const [speedScroll, setSpeedScroll] = useState(-11);
 
   useEffect(() => {
     if (windowWidth <= 990) {
-      setY1(0.15);
+      setY1(0.05);
       setY2(20);
       setSpeedScroll(-17);
+      /* if (windowHeight >= 1000) {
+        setY1(0.2);
+        setY2(50);
+        setSpeedScroll(-17);
+      } else {
+       //scroll action
+      }*/
     } else {
       setY1(0.3);
       setY2(30);
       setSpeedScroll(-11);
     }
+
     //funcion para actualizar el ancho de la pantalla cuando cambia
     function handleResize() {
       setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
     }
 
     // Agregar el listener para manejar el cambio de tamaño de la ventana
@@ -42,7 +52,7 @@ const SideBar = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, [windowWidth, windowHeight]);
 
   //foto perfil
   const PhotoP = (prop) => {

@@ -18,10 +18,10 @@ const SectionPorfolio = (props) => {
   //titulo Porfolio
   const TituloPf = (prop) => {
     const { speed } = prop;
-    const xvalue = useTransform(
+    const yvalue = useTransform(
       scrollYProgress,
-      [0, 0.6, 0.8], //0, 0.6 , 0.8
-      [0, 60, 80 * speed] //0, 60 , 80
+      [0.4, 0.5], //0, 0.6 , 0.8
+      [40, 50 * speed] //0, 60 , 80
     );
     return (
       <motion.h1
@@ -29,7 +29,7 @@ const SectionPorfolio = (props) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 1 }}
-        style={{ x: xvalue }}
+        style={{ y: -yvalue }}
       >
         {idioma.title}
       </motion.h1>
@@ -69,8 +69,8 @@ const SectionPorfolio = (props) => {
 
     const yValue = useTransform(
       scrollYProgress,
-      [0, 0.5, 1],
-      [0, 50, 100 * speed]
+      [0, 0.6, 1],
+      [0, 60, 100 * speed]
     );
 
     return (
@@ -96,7 +96,7 @@ const SectionPorfolio = (props) => {
         alt=""
       ></img>
       <Porfoliobg img="/img/bg/Condor.png" speed={-3.3} />
-      <TituloPf speed={3} />
+      <TituloPf speed={1.5} />
       <motion.div
         className="sectionPf__works"
         ref={ref}

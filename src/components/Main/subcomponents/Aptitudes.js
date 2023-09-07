@@ -58,15 +58,15 @@ const Aptitudes = (props) => {
           <div className="aptitudes__items__ctn">
             <p className="aptitudes__items__p">{idioma.item1}</p>
           </div>
-          <BarProgress porcent={40} />
+          <BarProgress porcent={40} inView={inView} />
           <div className="aptitudes__items__ctn">
             <p className="aptitudes__items__p">{idioma.item2}</p>
           </div>
-          <BarProgress porcent={90} />
+          <BarProgress porcent={90} inView={inView} />
           <div className="aptitudes__items__ctn">
             <p className="aptitudes__items__p">{idioma.item3}</p>
           </div>
-          <BarProgress porcent={80} />
+          <BarProgress porcent={80} inView={inView} />
         </div>
       </div>
     </motion.div>

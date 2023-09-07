@@ -151,11 +151,7 @@ const Navbar = (props) => {
         <BtnTranslate />
         <div className="nav-menu__bars" onClick={() => setIsOpen(!isOpen)}>
           <i className="fa-solid fa-bars"></i>
-          <motion.ul
-            className="nav-menu__bars__items"
-            initial={{ right: "-55%" }}
-            animate={dropside}
-          >
+          <motion.ul className="nav-menu__bars__items" animate={dropside}>
             <Link
               className="nav-menu__bars__items__link"
               activeClass="active"
@@ -166,7 +162,9 @@ const Navbar = (props) => {
               duration={2000}
               onClick={toElementDropSide}
             >
-              <li className="nav-menu__bars__items__li">INICIO</li>
+              <li className="nav-menu__bars__items__li">
+                <ItemNav item="home" />
+              </li>
             </Link>
             <Link
               className="nav-menu__bars__items__link"
@@ -178,7 +176,9 @@ const Navbar = (props) => {
               duration={2000}
               onClick={toElementDropSide}
             >
-              <li className="nav-menu__bars__items__li">SOBRE MI</li>
+              <li className="nav-menu__bars__items__li">
+                <ItemNav item="item1" />
+              </li>
             </Link>
             <Link
               className="nav-menu__bars__items__link"
@@ -190,7 +190,9 @@ const Navbar = (props) => {
               duration={2000}
               onClick={toElementDropSide}
             >
-              <li className="nav-menu__bars__items__li">PROYECTOS</li>
+              <li className="nav-menu__bars__items__li">
+                <ItemNav item="item2" />
+              </li>
             </Link>
             <Link
               className="nav-menu__bars__items__link"
@@ -202,7 +204,9 @@ const Navbar = (props) => {
               duration={2000}
               onClick={toElementDropSide}
             >
-              <li className="nav-menu__bars__items__li">CONTACTO</li>
+              <li className="nav-menu__bars__items__li">
+                <ItemNav item="item3" />
+              </li>
             </Link>
             <li className="nav-menu__bars__items__footer">
               GONZALO VAZQUEZ <br></br> FRONT END DEVELOPER - 2023
